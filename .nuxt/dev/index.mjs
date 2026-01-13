@@ -1,5 +1,5 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, removeResponseHeader, getQuery as getQuery$1, readBody, getCookie, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getResponseStatusText } from 'file:///Users/apple/Sites/Saloo/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, removeResponseHeader, getQuery as getQuery$1, readBody, getCookie, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, setHeader, getResponseStatusText } from 'file:///Users/apple/Sites/Saloo/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
@@ -2469,7 +2469,7 @@ const _83lfbzb9xHIMqezQCvnu2Atstjhi3buFQgj3W5F5akQ = defineNitroPlugin(async (ni
 
 const rootDir = "/Users/apple/Sites/Saloo";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders Saloo & Neena Chowdhury from Kolkata."},{"name":"keywords","content":"Saloo Chowdhury, Neena Chowdhury, Guinness World Record, circumnavigation, motor rally, adventure, Kolkata"}],"link":[],"style":[],"script":[{"src":"https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js","defer":true}],"noscript":[],"title":"Saloo & Neena Chowdhury - World Record Circumnavigators"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders Saloo & Neena Chowdhury from Kolkata."},{"name":"keywords","content":"Saloo Chowdhury, Neena Chowdhury, Guinness World Record, circumnavigation, motor rally, adventure, Kolkata, Ambassador car, world record holders"},{"name":"author","content":"Saloo & Neena Chowdhury"},{"name":"robots","content":"index, follow"},{"property":"og:type","content":"website"},{"property":"og:site_name","content":"Saloo & Neena Chowdhury"},{"name":"twitter:creator","content":"@SalooNeena"},{"name":"theme-color","content":"#3b82f6"}],"link":[{"rel":"canonical","href":"https://saloo-neena.com"},{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"}],"style":[],"script":[{"src":"https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js","defer":true},{"type":"application/ld+json","innerHTML":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Saloo Chowdhury\",\"alternateName\":\"Neena Chowdhury\",\"description\":\"World Record Holders - First and fastest circumnavigators of the globe by car\",\"url\":\"https://saloo-neena.com\",\"sameAs\":[\"https://www.guinnessworldrecords.com\"],\"knowsAbout\":[\"Motor Rally\",\"Circumnavigation\",\"World Records\",\"Adventure Travel\",\"Guinness World Records\"],\"award\":[\"Guinness World Record - First Circumnavigation by Car (1989)\",\"Guinness World Record - Fastest Circumnavigation by Car (1991)\"],\"birthPlace\":{\"@type\":\"Place\",\"name\":\"Kolkata, India\"}}"}],"noscript":[],"title":"Saloo & Neena Chowdhury - World Record Circumnavigators"};
 
 const appRootTag = "div";
 
@@ -3087,10 +3087,12 @@ const _4yqFuC = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
+const _lazy_pHSbEp = () => Promise.resolve().then(function () { return sitemap_xml$1; });
 const _lazy_tx_01i = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '', handler: _ZzIoLs, lazy: false, middleware: true, method: undefined },
+  { route: '/sitemap.xml', handler: _lazy_pHSbEp, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_tx_01i, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '/api/_mdc/highlight', handler: _ZhWbZn, lazy: false, middleware: false, method: undefined },
@@ -5422,6 +5424,51 @@ function isObject(obj) {
 const navigation = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   createNav: createNav
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const sitemap_xml = defineEventHandler(async (event) => {
+  const baseURL = "https://saloo-neena.com";
+  const routes = [
+    { url: "/", changefreq: "weekly", priority: 1 },
+    { url: "/about", changefreq: "monthly", priority: 0.8 },
+    { url: "/timeline", changefreq: "monthly", priority: 0.8 },
+    { url: "/journeys", changefreq: "monthly", priority: 0.9 },
+    { url: "/journeys/1", changefreq: "monthly", priority: 0.7 },
+    { url: "/journeys/2", changefreq: "monthly", priority: 0.7 },
+    { url: "/journeys/3", changefreq: "monthly", priority: 0.7 },
+    { url: "/journeys/4", changefreq: "monthly", priority: 0.7 },
+    { url: "/journeys/5", changefreq: "monthly", priority: 0.7 },
+    { url: "/journeys/6", changefreq: "monthly", priority: 0.7 },
+    { url: "/achievements", changefreq: "monthly", priority: 0.8 },
+    { url: "/gallery", changefreq: "weekly", priority: 0.8 },
+    { url: "/blog", changefreq: "weekly", priority: 0.9 },
+    { url: "/blog/first-journey-1989", changefreq: "monthly", priority: 0.7 },
+    { url: "/blog/breaking-army-record", changefreq: "monthly", priority: 0.7 },
+    { url: "/blog/australia-wild-encounters", changefreq: "monthly", priority: 0.7 },
+    { url: "/blog/guinness-world-record-story", changefreq: "monthly", priority: 0.7 },
+    { url: "/blog/partnership-that-conquered-world", changefreq: "monthly", priority: 0.7 },
+    { url: "/blog/beating-british-army-record", changefreq: "monthly", priority: 0.7 },
+    { url: "/blog/six-continents-countless-memories", changefreq: "monthly", priority: 0.7 },
+    { url: "/blog/car-that-conquered-world", changefreq: "monthly", priority: 0.7 },
+    { url: "/blog/fighting-for-recognition-guinness-battle", changefreq: "monthly", priority: 0.7 },
+    { url: "/contact", changefreq: "yearly", priority: 0.6 }
+  ];
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${routes.map((route) => `  <url>
+    <loc>${baseURL}${route.url}</loc>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+    <lastmod>${(/* @__PURE__ */ new Date()).toISOString().split("T")[0]}</lastmod>
+  </url>`).join("\n")}
+</urlset>`;
+  setHeader(event, "content-type", "application/xml");
+  return sitemap;
+});
+
+const sitemap_xml$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: sitemap_xml
 }, Symbol.toStringTag, { value: 'Module' }));
 
 function renderPayloadResponse(ssrContext) {

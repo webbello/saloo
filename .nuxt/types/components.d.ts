@@ -23,6 +23,7 @@ interface _GlobalComponents {
   'GlobeAnimation': typeof import("../../components/GlobeAnimation.vue").default
   'GlobeParallax': typeof import("../../components/GlobeParallax.vue").default
   'JourneyCard': typeof import("../../components/JourneyCard.vue").default
+  'SocialShare': typeof import("../../components/SocialShare.vue").default
   'TimelineEvent': typeof import("../../components/TimelineEvent.vue").default
   'ContentDoc': typeof import("../../node_modules/@nuxt/content/dist/runtime/components/ContentDoc.vue").default
   'ContentList': typeof import("../../node_modules/@nuxt/content/dist/runtime/components/ContentList.vue").default
@@ -95,6 +96,7 @@ interface _GlobalComponents {
   'LazyGlobeAnimation': LazyComponent<typeof import("../../components/GlobeAnimation.vue").default>
   'LazyGlobeParallax': LazyComponent<typeof import("../../components/GlobeParallax.vue").default>
   'LazyJourneyCard': LazyComponent<typeof import("../../components/JourneyCard.vue").default>
+  'LazySocialShare': LazyComponent<typeof import("../../components/SocialShare.vue").default>
   'LazyTimelineEvent': LazyComponent<typeof import("../../components/TimelineEvent.vue").default>
   'LazyContentDoc': LazyComponent<typeof import("../../node_modules/@nuxt/content/dist/runtime/components/ContentDoc.vue").default>
   'LazyContentList': LazyComponent<typeof import("../../node_modules/@nuxt/content/dist/runtime/components/ContentList.vue").default>

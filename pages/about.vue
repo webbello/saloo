@@ -16,7 +16,7 @@
           <div>
             <div class="relative">
               <NuxtImg 
-                src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop&crop=faces"
+                src="/images/gallery/Scan8.jpg"
                 alt="Saloo and Neena Chowdhury - World Record Holders"
                 class="rounded-lg shadow-lg w-full"
                 loading="lazy"

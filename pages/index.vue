@@ -21,7 +21,7 @@
           </div>
           
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
-            <span class="text-gradient">Saloo & Neena Chowdhury</span>
+            <span class="text-black/90 text-shadow-lg">Saloo & Neena Chowdhury</span>
           </h1>
           <p class="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto">
             First and fastest circumnavigators of the globe by car

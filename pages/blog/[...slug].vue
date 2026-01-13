@@ -44,7 +44,7 @@
         </header>
 
         <!-- Article Content -->
-        <div v-if="data" class="prose max-w-none">
+        <div v-if="data" class="prose prose-lg prose-gray max-w-none blog-content">
           <ContentRenderer :value="data" />
         </div>
 
@@ -161,5 +161,139 @@ const formatDate = (dateString) => {
   })
 }
 </script>
+
+<style scoped>
+.blog-content {
+  color: #374151;
+  line-height: 1.75;
+}
+
+.blog-content :deep(h1) {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+}
+
+.blog-content :deep(h2) {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+}
+
+.blog-content :deep(h3) {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content :deep(h4) {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-content :deep(p) {
+  margin-bottom: 1.5rem;
+  color: #374151;
+  line-height: 1.75;
+}
+
+.blog-content :deep(ul), 
+.blog-content :deep(ol) {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.blog-content :deep(li) {
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content :deep(ul li) {
+  position: relative;
+  list-style: none;
+}
+
+.blog-content :deep(ul li::before) {
+  content: "•";
+  color: #3b82f6;
+  font-weight: 700;
+  position: absolute;
+  left: -1rem;
+}
+
+.blog-content :deep(blockquote) {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 2rem 0;
+  background-color: #eff6ff;
+  font-style: italic;
+  color: #374151;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.blog-content :deep(strong) {
+  font-weight: 600;
+  color: #111827;
+}
+
+.blog-content :deep(em) {
+  font-style: italic;
+  color: #4b5563;
+}
+
+.blog-content :deep(code) {
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  color: #1f2937;
+}
+
+.blog-content :deep(pre) {
+  background-color: #111827;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.blog-content :deep(a) {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.blog-content :deep(a:hover) {
+  color: #1e40af;
+}
+
+.blog-content :deep(img) {
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+}
+
+.blog-content :deep(hr) {
+  border-color: #d1d5db;
+  margin: 2rem 0;
+}
+</style>
 
 
