@@ -50,7 +50,7 @@
 
         <!-- Article Footer -->
         <footer class="mt-12 pt-8 border-t border-gray-200">
-          <div class="flex items-center justify-between">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div class="flex items-center space-x-4">
               <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                 <iconify-icon icon="lucide:user" class="text-blue-600 text-xl"></iconify-icon>
@@ -61,17 +61,10 @@
               </div>
             </div>
             
-            <div class="flex space-x-4">
-              <button class="p-2 text-gray-400 hover:text-blue-600 transition-colors">
-                <iconify-icon icon="lucide:facebook" class="text-xl"></iconify-icon>
-              </button>
-              <button class="p-2 text-gray-400 hover:text-blue-600 transition-colors">
-                <iconify-icon icon="lucide:twitter" class="text-xl"></iconify-icon>
-              </button>
-              <button class="p-2 text-gray-400 hover:text-blue-600 transition-colors">
-                <iconify-icon icon="lucide:share-2" class="text-xl"></iconify-icon>
-              </button>
-            </div>
+            <SocialShare 
+              :title="data.title"
+              :description="data.description"
+            />
           </div>
         </footer>
 

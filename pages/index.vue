@@ -187,8 +187,12 @@ useSeoMeta({
   description: 'First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders from Kolkata, India.',
   ogTitle: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
   ogDescription: 'First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders from Kolkata, India.',
-  ogImage: '/images/hero-og.jpg',
-  twitterCard: 'summary_large_image'
+  ogImage: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=630&fit=crop',
+  ogUrl: 'https://saloo-neena.com',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
+  twitterDescription: 'First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders from Kolkata, India.',
+  twitterImage: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=630&fit=crop'
 })
 
 const featuredJourneys = [
