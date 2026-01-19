@@ -25,6 +25,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   
   app: {
+    baseURL: '/saloo/',
     head: {
       title: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
       meta: [
@@ -96,7 +97,7 @@ export default defineNuxtConfig({
       routes: ['/sitemap.xml']
     }
   },
-
+  
   experimental: {
     payloadExtraction: false
   }
