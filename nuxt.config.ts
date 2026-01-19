@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   
   app: {
-    baseURL: '/saloo/',
+    baseURL: '/', // Changed from '/saloo/' to '/'
     buildAssetsDir: 'assets',
     head: {
       title: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
