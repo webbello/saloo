@@ -11,22 +11,24 @@
         </div>
 
         <!-- Category Filter -->
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
-          <button 
-            v-for="category in categories" 
-            :key="category.id"
-            @click="activeCategory = category.id"
-            class="px-6 py-2 rounded-full transition-colors duration-200 flex items-center"
-            :class="activeCategory === category.id 
-              ? 'bg-blue-600 text-white' 
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
-          >
-            <iconify-icon :icon="category.icon" class="mr-2"></iconify-icon>
-            {{ category.name }}
-            <span class="ml-2 bg-white bg-opacity-20 px-2 py-1 rounded-full text-xs">
-              {{ category.count }}
-            </span>
-          </button>
+        <div class="mb-12 -mx-4 px-4 overflow-x-auto scrollbar-hide">
+          <div class="flex gap-4 min-w-max pb-2">
+            <button 
+              v-for="category in categories" 
+              :key="category.id"
+              @click="activeCategory = category.id"
+              class="px-6 py-2 rounded-full transition-colors duration-200 flex items-center whitespace-nowrap flex-shrink-0"
+              :class="activeCategory === category.id 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
+            >
+              <iconify-icon :icon="category.icon" class="mr-2"></iconify-icon>
+              {{ category.name }}
+              <span class="ml-2 bg-white bg-opacity-20 px-2 py-1 rounded-full text-xs">
+                {{ category.count }}
+              </span>
+            </button>
+          </div>
         </div>
 
         <!-- Gallery Grid -->
