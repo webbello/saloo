@@ -90,13 +90,19 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: 'github-dark'
+    },
+    // Important: Configure content for static generation
+    experimental: {
+      clientDB: true // Enable client-side content database
     }
   },
 
   nitro: {
     preset: 'github-pages',
     prerender: {
-      routes: ['/sitemap.xml']
+      routes: ['/'], // Add your routes here
+      crawlLinks: true, // This will crawl and prerender all linked pages
+
     }
   },
   

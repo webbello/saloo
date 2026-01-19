@@ -1,1 +1,1 @@
-export { default } from "/Users/apple/Sites/Saloo/node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue"
+export default "img"

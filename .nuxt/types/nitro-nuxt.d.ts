@@ -2,7 +2,6 @@
 /// <reference path="app.config.d.ts" />
 /// <reference path="runtime-config.d.ts" />
 /// <reference types="/Users/apple/Sites/Saloo/node_modules/@nuxt/nitro-server/dist/index.mjs" />
-/// <reference path="../image/providers.d.ts" />
 /// <reference path="nitro-middleware.d.ts" />
 
 import type { RuntimeConfig } from 'nuxt/schema'

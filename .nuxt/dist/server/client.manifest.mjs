@@ -1,1 +1,1 @@
-export { default } from "file:///Users/apple/Sites/Saloo/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export default ({"@vite/client":{prefetch:!0,isEntry:!0,file:"@vite/client",css:[],module:!0,resourceType:"script",dynamicImports:void 0},"/Users/apple/Sites/Saloo/node_modules/nuxt/dist/app/entry.async.js":{resourceType:"script",module:!0,prefetch:!0,preload:!0,isEntry:!0,file:"/Users/apple/Sites/Saloo/node_modules/nuxt/dist/app/entry.async.js",dynamicImports:void 0}})

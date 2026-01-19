@@ -1,5 +1,5 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, removeResponseHeader, getQuery as getQuery$1, readBody, getCookie, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, setHeader, getResponseStatusText } from 'file:///Users/apple/Sites/Saloo/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, removeResponseHeader, getQuery as getQuery$1, readBody, getCookie, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, setHeader, getResponseStatusText } from 'file:///Users/apple/Sites/Saloo/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
@@ -59,8 +59,6 @@ import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:/
 import process$1 from 'node:process';
 import { renderToString } from 'file:///Users/apple/Sites/Saloo/node_modules/vue/server-renderer/index.mjs';
 import { walkResolver } from 'file:///Users/apple/Sites/Saloo/node_modules/@nuxt/nitro-server/node_modules/unhead/dist/utils.mjs';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file:///Users/apple/Sites/Saloo/node_modules/ipx/dist/index.mjs';
-import { isAbsolute } from 'file:///Users/apple/Sites/Saloo/node_modules/@nuxt/image/node_modules/pathe/dist/index.mjs';
 
 const serverAssets = [{"baseName":"server","dir":"/Users/apple/Sites/Saloo/server/assets"}];
 
@@ -652,9 +650,9 @@ function _expandFromEnv(value) {
 
 const _inlineRuntimeConfig = {
   "app": {
-    "baseURL": "/",
+    "baseURL": "/saloo/",
     "buildId": "dev",
-    "buildAssetsDir": "/_nuxt/",
+    "buildAssetsDir": "assets",
     "cdnURL": ""
   },
   "nitro": {
@@ -663,12 +661,12 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
-      "/_nuxt/builds/meta/**": {
+      "/assets/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
         }
       },
-      "/_nuxt/builds/**": {
+      "/assets/builds/**": {
         "headers": {
           "cache-control": "public, max-age=1, immutable"
         }
@@ -724,7 +722,7 @@ const _inlineRuntimeConfig = {
       "experimental": {
         "stripQueryParameters": false,
         "advanceQuery": false,
-        "clientDB": false
+        "clientDB": true
       },
       "respectPathCase": false,
       "api": {
@@ -884,23 +882,11 @@ const _inlineRuntimeConfig = {
     "documentDriven": false,
     "respectPathCase": false,
     "experimental": {
-      "clientDB": false,
+      "clientDB": true,
       "cacheContents": true,
       "stripQueryParameters": false,
       "advanceQuery": false,
       "search": ""
-    }
-  },
-  "ipx": {
-    "baseURL": "/_ipx",
-    "alias": {},
-    "fs": {
-      "dir": [
-        "/Users/apple/Sites/Saloo/public"
-      ]
-    },
-    "http": {
-      "domains": []
     }
   }
 };
@@ -1483,7 +1469,7 @@ async function defaultHandler(error, event, opts) {
   const statusMessage = error.statusMessage || "Server Error";
   const url = getRequestURL(event, { xForwardedHost: true, xForwardedProto: true });
   if (statusCode === 404) {
-    const baseURL = "/";
+    const baseURL = "/saloo/";
     if (/^\/[^/]/.test(baseURL) && !url.pathname.startsWith(baseURL)) {
       const redirectTo = `${baseURL}${url.pathname.slice(1)}${url.search}`;
       return {
@@ -2572,7 +2558,7 @@ function readAsset (id) {
   return promises.readFile(resolve$1(serverDir, assets[id].path))
 }
 
-const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1}};
+const publicAssetBases = {"/assets/builds/meta/":{"maxAge":31536000},"/assets/builds/":{"maxAge":1}};
 
 function isPublicAssetURL(id = '') {
   if (assets[id]) {
@@ -2695,7 +2681,7 @@ function createSSRContext(event) {
     url: event.path,
     event,
     runtimeConfig: useRuntimeConfig(event),
-    noSSR: event.context.nuxt?.noSSR || (false),
+    noSSR: true,
     head: createHead(unheadOptions),
     error: false,
     nuxt: void 0,
@@ -2714,7 +2700,7 @@ function setSSRError(ssrContext, error) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getServerEntry = () => import('file:///Users/apple/Sites/Saloo/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
+const getServerEntry = () => Promise.resolve().then(function () { return server$1; }).then((r) => r.default || r);
 const getClientManifest = () => import('file:///Users/apple/Sites/Saloo/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const createSSRApp = await getServerEntry();
@@ -2784,7 +2770,7 @@ function lazyCachedFunction(fn) {
   };
 }
 function getRenderer(ssrContext) {
-  return ssrContext.noSSR ? getSPARenderer() : getSSRRenderer();
+  return getSPARenderer() ;
 }
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
 
@@ -3069,24 +3055,6 @@ const __Behxq = defineEventHandler(async (event) => {
   return createNav(contents?.result || contents, configs);
 });
 
-const _4yqFuC = lazyEventHandler(() => {
-  const opts = useRuntimeConfig().ipx || {};
-  const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
-  const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
-  const httpStorage = opts.http?.domains ? ipxHttpStorage({ ...opts.http }) : void 0;
-  if (!fsStorage && !httpStorage) {
-    throw new Error("IPX storage is not configured!");
-  }
-  const ipxOptions = {
-    ...opts,
-    storage: fsStorage || httpStorage,
-    httpStorage
-  };
-  const ipx = createIPX(ipxOptions);
-  const ipxHandler = createIPXH3Handler(ipx);
-  return useBase(opts.baseURL, ipxHandler);
-});
-
 const _lazy_pHSbEp = () => Promise.resolve().then(function () { return sitemap_xml$1; });
 const _lazy_tx_01i = () => Promise.resolve().then(function () { return renderer$1; });
 
@@ -3103,7 +3071,6 @@ const handlers = [
   { route: '/api/_content/navigation/:qid/**:params', handler: __Behxq, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/navigation/:qid', handler: __Behxq, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/navigation', handler: __Behxq, lazy: false, middleware: false, method: "get" },
-  { route: '/_ipx/**', handler: _4yqFuC, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_tx_01i, lazy: true, middleware: false, method: undefined }
 ];
 
@@ -3259,7 +3226,7 @@ parentPort?.on("message", (msg) => {
   }
 });
 const nitroApp = useNitroApp();
-const server = new Server(toNodeListener(nitroApp.h3App));
+const server$2 = new Server(toNodeListener(nitroApp.h3App));
 let listener;
 listen().catch(() => listen(
   true
@@ -3299,8 +3266,8 @@ function listen(useRandomPort = Boolean(
 )) {
   return new Promise((resolve, reject) => {
     try {
-      listener = server.listen(useRandomPort ? 0 : getSocketAddress(), () => {
-        const address = server.address();
+      listener = server$2.listen(useRandomPort ? 0 : getSocketAddress(), () => {
+        const address = server$2.address();
         parentPort?.postMessage({
           event: "listen",
           address: typeof address === "string" ? { socketPath: address } : { host: "localhost", port: address?.port }
@@ -3326,7 +3293,7 @@ function getSocketAddress() {
   return join(tmpdir(), socketName);
 }
 async function shutdown() {
-  server.closeAllConnections?.();
+  server$2.closeAllConnections?.();
   await Promise.all([
     new Promise((resolve) => listener?.close(resolve)),
     nitroApp.hooks.callHook("close").catch(console.error)
@@ -5013,6 +4980,13 @@ const storage = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   sourceStorage: sourceStorage
 }, Symbol.toStringTag, { value: 'Module' }));
 
+const server = () => {};
+
+const server$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: server
+}, Symbol.toStringTag, { value: 'Module' }));
+
 const template = "";
 
 const _virtual__spaTemplate = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
@@ -5471,24 +5445,13 @@ const sitemap_xml$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePrope
   default: sitemap_xml
 }, Symbol.toStringTag, { value: 'Module' }));
 
-function renderPayloadResponse(ssrContext) {
-  return {
-    body: stringify(splitPayload(ssrContext).payload, ssrContext._payloadReducers) ,
-    statusCode: getResponseStatus(ssrContext.event),
-    statusMessage: getResponseStatusText(ssrContext.event),
-    headers: {
-      "content-type": "application/json;charset=utf-8" ,
-      "x-powered-by": "Nuxt"
-    }
-  };
-}
 function renderPayloadJsonScript(opts) {
   const contents = opts.data ? stringify(opts.data, opts.ssrContext._payloadReducers) : "";
   const payload = {
     "type": "application/json",
     "innerHTML": contents,
     "data-nuxt-data": appId,
-    "data-ssr": !(opts.ssrContext.noSSR)
+    "data-ssr": false
   };
   {
     payload.id = "__NUXT_DATA__";
@@ -5504,13 +5467,6 @@ function renderPayloadJsonScript(opts) {
     }
   ];
 }
-function splitPayload(ssrContext) {
-  const { data, prerenderedAt, ...initial } = ssrContext.payload;
-  return {
-    initial: { ...initial, prerenderedAt },
-    payload: { data, prerenderedAt }
-  };
-}
 
 const renderSSRHeadOptions = {"omitLineBreaks":true};
 
@@ -5519,7 +5475,6 @@ globalThis.__publicAssetsURL = publicAssetsURL;
 const HAS_APP_TELEPORTS = !!(appTeleportAttrs.id);
 const APP_TELEPORT_OPEN_TAG = HAS_APP_TELEPORTS ? `<${appTeleportTag}${propsToString(appTeleportAttrs)}>` : "";
 const APP_TELEPORT_CLOSE_TAG = HAS_APP_TELEPORTS ? `</${appTeleportTag}>` : "";
-const PAYLOAD_URL_RE = /^[^?]*\/_payload.json(?:\?.*)?$/ ;
 const renderer = defineRenderHandler(async (event) => {
   const nitroApp = useNitroApp();
   const ssrError = event.path.startsWith("/__nuxt_error") ? getQuery$1(event) : null;
@@ -5542,17 +5497,11 @@ const renderer = defineRenderHandler(async (event) => {
     }
     setSSRError(ssrContext, ssrError);
   }
-  const isRenderingPayload = PAYLOAD_URL_RE.test(ssrContext.url);
-  if (isRenderingPayload) {
-    const url = ssrContext.url.substring(0, ssrContext.url.lastIndexOf("/")) || "/";
-    ssrContext.url = url;
-    event._path = event.node.req.url = url;
-  }
   const routeOptions = getRouteRules(event);
   if (routeOptions.ssr === false) {
     ssrContext.noSSR = true;
   }
-  const renderer = await getRenderer(ssrContext);
+  const renderer = await getRenderer();
   const _rendered = await renderer.renderToString(ssrContext).catch(async (error) => {
     if (ssrContext._renderResponse && error.message === "skipping render") {
       return {};
@@ -5568,10 +5517,6 @@ const renderer = defineRenderHandler(async (event) => {
   }
   if (ssrContext.payload?.error && !ssrError) {
     throw ssrContext.payload.error;
-  }
-  if (isRenderingPayload) {
-    const response = renderPayloadResponse(ssrContext);
-    return response;
   }
   const NO_SCRIPTS = routeOptions.noScripts;
   const { styles, scripts } = getRequestDependencies(ssrContext, renderer.rendererContext);
