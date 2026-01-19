@@ -148,35 +148,35 @@ const categories = [
 
 const allImages = [
   // Journey Moments
-  { id: 1, src: `${siteConfig.baseURL}/gallery/Scan1.jpg`, alt: 'Journey Start', title: 'The Beginning', description: 'Starting our historic journey from Delhi', category: 'journey' },
-  { id: 2, src: `${siteConfig.baseURL}/gallery/Scan2.jpg`, alt: 'Car Preparation', title: 'Getting Ready', description: 'Final preparations before departure', category: 'journey' },
-  { id: 3, src: `${siteConfig.baseURL}/gallery/Scan3.jpg`, alt: 'Border Crossing', title: 'International Borders', description: 'Crossing international boundaries', category: 'journey' },
-  { id: 4, src: `${siteConfig.baseURL}/gallery/Scan4.jpg`, alt: 'Journey Moments', title: 'On the Road', description: 'Memorable moments during the journey', category: 'journey' },
-  { id: 5, src: `${siteConfig.baseURL}/gallery/Scan5.jpg`, alt: 'Adventure', title: 'Adventure Time', description: 'Exciting moments from the expedition', category: 'journey' },
+  { id: 1, src: `${siteConfig.baseURL}/images/gallery/Scan1.jpg`, alt: 'Journey Start', title: 'The Beginning', description: 'Starting our historic journey from Delhi', category: 'journey' },
+  { id: 2, src: `${siteConfig.baseURL}/images/gallery/Scan2.jpg`, alt: 'Car Preparation', title: 'Getting Ready', description: 'Final preparations before departure', category: 'journey' },
+  { id: 3, src: `${siteConfig.baseURL}/images/gallery/Scan3.jpg`, alt: 'Border Crossing', title: 'International Borders', description: 'Crossing international boundaries', category: 'journey' },
+  { id: 4, src: `${siteConfig.baseURL}/images/gallery/Scan4.jpg`, alt: 'Journey Moments', title: 'On the Road', description: 'Memorable moments during the journey', category: 'journey' },
+  { id: 5, src: `${siteConfig.baseURL}/images/gallery/Scan5.jpg`, alt: 'Adventure', title: 'Adventure Time', description: 'Exciting moments from the expedition', category: 'journey' },
   
   // Landscapes
-  { id: 6, src: `${siteConfig.baseURL}/gallery/Scan6.jpg`, alt: 'Scenic Route', title: 'Beautiful Landscapes', description: 'Stunning views encountered during travel', category: 'landscapes' },
-  { id: 7, src: `${siteConfig.baseURL}/gallery/Scan7.jpg`, alt: 'Mountain Roads', title: 'Mountain Passes', description: 'Challenging mountain terrain', category: 'landscapes' },
-  { id: 8, src: `${siteConfig.baseURL}/gallery/Scan8.jpg`, alt: 'Desert Crossing', title: 'Desert Adventures', description: 'Crossing vast desert landscapes', category: 'landscapes' },
-  { id: 9, src: `${siteConfig.baseURL}/gallery/Scan9.jpg`, alt: 'Coastal Views', title: 'Coastal Journey', description: 'Beautiful coastal roads and views', category: 'landscapes' },
+  { id: 6, src: `${siteConfig.baseURL}/images/gallery/Scan6.jpg`, alt: 'Scenic Route', title: 'Beautiful Landscapes', description: 'Stunning views encountered during travel', category: 'landscapes' },
+  { id: 7, src: `${siteConfig.baseURL}/images/gallery/Scan7.jpg`, alt: 'Mountain Roads', title: 'Mountain Passes', description: 'Challenging mountain terrain', category: 'landscapes' },
+  { id: 8, src: `${siteConfig.baseURL}/images/gallery/Scan8.jpg`, alt: 'Desert Crossing', title: 'Desert Adventures', description: 'Crossing vast desert landscapes', category: 'landscapes' },
+  { id: 9, src: `${siteConfig.baseURL}/images/gallery/Scan9.jpg`, alt: 'Coastal Views', title: 'Coastal Journey', description: 'Beautiful coastal roads and views', category: 'landscapes' },
   
   // People & Culture
-  { id: 10, src: `${siteConfig.baseURL}/gallery/Scan10.jpg`, alt: 'Local People', title: 'Meeting Locals', description: 'Connecting with people from different cultures', category: 'people' },
-  { id: 11, src: `${siteConfig.baseURL}/gallery/Scan11.jpg`, alt: 'Cultural Exchange', title: 'Cultural Moments', description: 'Learning about local traditions', category: 'people' },
-  { id: 12, src: `${siteConfig.baseURL}/gallery/Scan12.jpg`, alt: 'Team Photo', title: 'Team Moments', description: 'Special moments with the team', category: 'people' },
+  { id: 10, src: `${siteConfig.baseURL}/images/gallery/Scan10.jpg`, alt: 'Local People', title: 'Meeting Locals', description: 'Connecting with people from different cultures', category: 'people' },
+  { id: 11, src: `${siteConfig.baseURL}/images/gallery/Scan11.jpg`, alt: 'Cultural Exchange', title: 'Cultural Moments', description: 'Learning about local traditions', category: 'people' },
+  { id: 12, src: `${siteConfig.baseURL}/images/gallery/Scan12.jpg`, alt: 'Team Photo', title: 'Team Moments', description: 'Special moments with the team', category: 'people' },
   
   // Achievements
-  { id: 13, src: `${siteConfig.baseURL}/gallery/Scan13.jpg`, alt: 'Achievement', title: 'World Record Achievement', description: 'Celebrating the world record', category: 'achievements' },
-  { id: 14, src: `${siteConfig.baseURL}/gallery/Scan14.jpg`, alt: 'Recognition', title: 'Official Recognition', description: 'Receiving official recognition', category: 'achievements' },
+  { id: 13, src: `${siteConfig.baseURL}/images/gallery/Scan13.jpg`, alt: 'Achievement', title: 'World Record Achievement', description: 'Celebrating the world record', category: 'achievements' },
+  { id: 14, src: `${siteConfig.baseURL}/images/gallery/Scan14.jpg`, alt: 'Recognition', title: 'Official Recognition', description: 'Receiving official recognition', category: 'achievements' },
   
   // Behind the Scenes
-  { id: 15, src: `${siteConfig.baseURL}/gallery/Scan-006.BMP.jpg`, alt: 'Behind Scenes', title: 'Behind the Scenes', description: 'Candid moments from the journey', category: 'behind-scenes' },
-  { id: 16, src: `${siteConfig.baseURL}/gallery/Scan-007.BMP.jpg`, alt: 'Preparation', title: 'Journey Preparation', description: 'Getting ready for the adventure', category: 'behind-scenes' },
-  { id: 17, src: `${siteConfig.baseURL}/gallery/Scan-008.BMP.jpg`, alt: 'Documentation', title: 'Documenting History', description: 'Recording the historic journey', category: 'behind-scenes' },
+  { id: 15, src: `${siteConfig.baseURL}/images/gallery/Scan-006.BMP.jpg`, alt: 'Behind Scenes', title: 'Behind the Scenes', description: 'Candid moments from the journey', category: 'behind-scenes' },
+  { id: 16, src: `${siteConfig.baseURL}/images/gallery/Scan-007.BMP.jpg`, alt: 'Preparation', title: 'Journey Preparation', description: 'Getting ready for the adventure', category: 'behind-scenes' },
+  { id: 17, src: `${siteConfig.baseURL}/images/gallery/Scan-008.BMP.jpg`, alt: 'Documentation', title: 'Documenting History', description: 'Recording the historic journey', category: 'behind-scenes' },
   
   // Behind the Scenes
-  { id: 11, src: `${siteConfig.baseURL}/gallery/mechanical-work.jpg`, alt: 'Mechanical Work', title: 'Roadside Repairs', description: 'Fixing mechanical issues on the road', category: 'behind-scenes' },
-  { id: 12, src: `${siteConfig.baseURL}/gallery/planning-session.jpg`, alt: 'Planning Session', title: 'Route Planning', description: 'Strategic planning during the journey', category: 'behind-scenes' }
+  { id: 11, src: `${siteConfig.baseURL}/images/gallery/mechanical-work.jpg`, alt: 'Mechanical Work', title: 'Roadside Repairs', description: 'Fixing mechanical issues on the road', category: 'behind-scenes' },
+  { id: 12, src: `${siteConfig.baseURL}/images/gallery/planning-session.jpg`, alt: 'Planning Session', title: 'Route Planning', description: 'Strategic planning during the journey', category: 'behind-scenes' }
 ]
 
 const filteredImages = computed(() => {
