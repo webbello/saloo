@@ -33,7 +33,7 @@
 
           <!-- Journey Image -->
           <div class="mb-12">
-            <NuxtImg 
+            <img 
               :src="journey.image" 
               :alt="journey.title"
               class="w-full h-96 object-cover rounded-lg"

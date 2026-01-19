@@ -5,7 +5,7 @@
     :class="featured ? 'md:col-span-1' : ''"
   >
     <div class="relative" :class="featured ? 'h-64' : 'h-48'">
-      <NuxtImg 
+      <img 
         v-if="post.image"
         :src="post.image" 
         :alt="post.title"

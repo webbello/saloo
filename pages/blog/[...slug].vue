@@ -23,7 +23,7 @@
           
           <!-- Featured Image -->
           <div v-if="data.image" class="relative rounded-lg overflow-hidden shadow-lg mb-8">
-            <NuxtImg 
+            <img 
               :src="data.image" 
               :alt="data.title"
               class="w-full h-96 object-cover"

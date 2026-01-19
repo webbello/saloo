@@ -15,7 +15,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <div class="relative">
-              <NuxtImg 
+              <img 
                 src="/images/gallery/Scan8.jpg"
                 alt="Saloo and Neena Chowdhury - World Record Holders"
                 class="rounded-lg shadow-lg w-full"
