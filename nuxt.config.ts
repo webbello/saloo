@@ -91,14 +91,14 @@ export default defineNuxtConfig({
     }
   },
 
-  image: {
-    quality: 80,
-    format: ['webp', 'jpg']
-  },
-
   nitro: {
+    preset: 'static',
     prerender: {
       routes: ['/sitemap.xml']
     }
+  },
+  
+  experimental: {
+    payloadExtraction: false
   }
 })
