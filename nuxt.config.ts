@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-01-13',
-  
+  ssr: false,
+  target: 'static',
   modules: [
     '@nuxt/content',
     '@vueuse/nuxt'
@@ -26,6 +27,7 @@ export default defineNuxtConfig({
   
   app: {
     baseURL: '/saloo/',
+    buildAssetsDir: 'assets',
     head: {
       title: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
       meta: [
@@ -92,10 +94,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'static',
-    output: {
-      publicDir: 'docs'
-    },
+    preset: 'github-pages',
     prerender: {
       routes: ['/sitemap.xml']
     }
