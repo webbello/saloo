@@ -46,7 +46,7 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#3b82f6' }
       ],
       link: [
-        { rel: 'canonical', href: 'https://saloo-neena.com' },
+        { rel: 'canonical', href: 'https://salooneenachoudhury.com' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ],
       script: [
@@ -62,7 +62,7 @@ export default defineNuxtConfig({
             "name": "Saloo Chowdhury",
             "alternateName": "Neena Chowdhury",
             "description": "World Record Holders - First and fastest circumnavigators of the globe by car",
-            "url": "https://saloo-neena.com",
+            "url": "https://salooneenachoudhury.com",
             "sameAs": [
               "https://www.guinnessworldrecords.com"
             ],
