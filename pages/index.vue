@@ -1,16 +1,7 @@
 <template>
   <div class="pt-16">
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50">
-      <!-- Animated Ambassador Car SVG -->
-      <div class="absolute inset-0 opacity-20">
-        <AmbassadorCarAnimation />
-      </div>
-      
-      <!-- Globe Animation Background -->
-      <div class="absolute inset-0 opacity-10">
-        <GlobeAnimation />
-      </div>
+    <section class="relative min-h-svh flex items-center justify-center overflow-hidden bg-linear-to-r from-yellow-400 via-yellow-100 to-yellow-400">
       
       <div class="container-max text-center z-10">
         <div class="animate-fade-in">
@@ -23,43 +14,52 @@
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             <span class="text-black/90 text-shadow-lg">Saloo & Neena Chowdhury</span>
           </h1>
-          <p class="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto">
+          <p class="text-xl md:text-2xl text-gray-900 mb-4 max-w-3xl mx-auto">
             First and fastest circumnavigators of the globe by car
           </p>
-          <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
+          <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
             Covering six continents in their trusted Hindustan Ambassador • Guinness World Record holders from Kolkata, India
           </p>
           
           <!-- Key Stats -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
-            <div class="bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <div class="text-2xl font-bold text-blue-600">39 Days</div>
-              <div class="text-sm text-gray-600">20 hours, 15 minutes</div>
-              <div class="text-xs text-gray-500">Fastest Record (1991)</div>
+          <div class="grid grid-cols-3 gap-3 md:gap-6 mb-6 md:mb-8 max-w-4xl mx-auto px-4">
+            <div class="bg-white/70 md:bg-white/80 backdrop-blur-sm p-2 md:p-4 rounded-lg shadow-lg">
+              <div class="text-lg md:text-2xl font-bold text-blue-600">39 Days</div>
+              <div class="text-xs md:text-sm text-gray-600 hidden sm:block">20 hours, 15 minutes</div>
+              <div class="text-[10px] md:text-xs text-gray-500">Fastest Record</div>
             </div>
-            <div class="bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <div class="text-2xl font-bold text-blue-600">6 Continents</div>
-              <div class="text-sm text-gray-600">40,535 km covered</div>
-              <div class="text-xs text-gray-500">Complete circumnavigation</div>
+            <div class="bg-white/70 md:bg-white/80 backdrop-blur-sm p-2 md:p-4 rounded-lg shadow-lg">
+              <div class="text-lg md:text-2xl font-bold text-blue-600">6 Continents</div>
+              <div class="text-xs md:text-sm text-gray-600 hidden sm:block">40,535 km covered</div>
+              <div class="text-[10px] md:text-xs text-gray-500">Complete route</div>
             </div>
-            <div class="bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <div class="text-2xl font-bold text-blue-600">First Ever</div>
-              <div class="text-sm text-gray-600">By car (1989)</div>
-              <div class="text-xs text-gray-500">Guinness World Record</div>
+            <div class="bg-white/70 md:bg-white/80 backdrop-blur-sm p-2 md:p-4 rounded-lg shadow-lg">
+              <div class="text-lg md:text-2xl font-bold text-blue-600">First Ever</div>
+              <div class="text-xs md:text-sm text-gray-600 hidden sm:block">By car (1989)</div>
+              <div class="text-[10px] md:text-xs text-gray-500">World Record</div>
             </div>
           </div>
-          
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <NuxtLink to="/journeys" class="btn-primary">
+
+          <div class="flex sm:flex-row gap-3 md:gap-4 justify-center px-4">
+            <NuxtLink to="/journeys" class="btn-primary text-sm md:text-base py-2 md:py-3">
               <iconify-icon icon="lucide:map" class="mr-2"></iconify-icon>
               Explore Journeys
             </NuxtLink>
-            <NuxtLink to="/about" class="btn-secondary">
+            <NuxtLink to="/about" class="btn-secondary text-sm md:text-base py-2 md:py-3">
               <iconify-icon icon="lucide:users" class="mr-2"></iconify-icon>
               About Us
             </NuxtLink>
           </div>
         </div>
+      </div>
+      <!-- Animated Ambassador Car SVG -->
+      <div class="absolute inset-0 opacity-20">
+        <AmbassadorCarAnimation />
+      </div>
+      
+      <!-- Globe Animation Background -->
+      <div class="absolute inset-0 opacity-10">
+        <GlobeAnimation />
       </div>
       
       <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
