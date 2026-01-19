@@ -56,7 +56,7 @@
       <!-- Image -->
       <div class="w-5/12" :class="index % 2 === 0 ? 'pl-8' : 'pr-8'">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <NuxtImg 
+          <img 
             v-if="event.image"
             :src="event.image" 
             :alt="event.title"

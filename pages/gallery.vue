@@ -38,7 +38,7 @@
             class="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             :class="getGridClass(index)"
           >
-            <NuxtImg 
+            <img 
               :src="image.src" 
               :alt="image.alt"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -103,7 +103,7 @@
           </button>
 
           <div class="relative max-w-4xl max-h-full">
-            <NuxtImg 
+            <img 
               :src="currentImage.src" 
               :alt="currentImage.alt"
               class="max-w-full max-h-full object-contain"

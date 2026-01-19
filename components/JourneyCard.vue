@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
     <div class="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100">
-      <NuxtImg 
+      <img 
         v-if="journey.image"
         :src="journey.image" 
         :alt="journey.title"
