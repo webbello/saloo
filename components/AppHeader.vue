@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-200 shadow-sm">
+  <header class="fixed top-0 w-full backdrop-blur-md z-50 border-b border-yellow-200 shadow-sm">
     <nav class="container-max">
       <div class="flex items-center justify-between h-14 sm:h-16 px-4 sm:px-6">
         <NuxtLink to="/" class="flex items-center space-x-2">

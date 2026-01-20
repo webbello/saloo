@@ -1,7 +1,7 @@
 <template>
-  <div class="pt-16">
+  <div class="md:pt-16">
     <!-- Hero Section -->
-    <section class="relative min-h-svh flex items-center justify-center overflow-hidden bg-linear-to-r from-yellow-400 via-yellow-100 to-yellow-400">
+    <section class="relative min-h-svh flex items-center justify-center overflow-hidden">
       
       <div class="container-max text-center z-10">
         <div class="animate-fade-in">
