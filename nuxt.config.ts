@@ -41,6 +41,7 @@ export default defineNuxtConfig({
         { name: 'author', content: 'Saloo & Neena Chowdhury' },
         { name: 'robots', content: 'index, follow' },
         { property: 'og:type', content: 'website' },
+        { property: 'og:image', content: 'https://salooneenachoudhury.com/images/gallery/og-image.jpg' },
         { property: 'og:site_name', content: 'Saloo & Neena Chowdhury' },
         { name: 'twitter:creator', content: '@SalooNeena' },
         { name: 'theme-color', content: '#3b82f6' }
