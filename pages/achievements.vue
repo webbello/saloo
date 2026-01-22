@@ -110,7 +110,7 @@ useSeoMeta({
 const achievements = [
   {
     id: 1,
-    title: 'First Circumnavigators',
+    title: 'First & Fastest Circumnavigators',
     description: 'First man and woman to circumnavigate the globe by car covering six continents',
     icon: 'lucide:globe',
     color: 'blue',

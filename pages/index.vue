@@ -1,56 +1,110 @@
 <template>
   <div class="md:pt-16">
     <!-- Hero Section -->
-    <section class="relative min-h-svh flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-amber-950 text-white pt-24 overflow-hidden">
       
-      <div class="container-max text-center z-10">
-        <div class="animate-fade-in">
-          <!-- Rally Badge -->
-          <div class="inline-flex items-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-lg">
-            <iconify-icon icon="lucide:car" class="text-blue-600 mr-2"></iconify-icon>
-            <span class="text-sm font-semibold text-gray-700">World Record Motor Rally Champions</span>
-          </div>
+      <!-- Animated Gradient Orbs -->
+      <div class="absolute top-20 right-10 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-20 left-10 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
           
-          <h1 class="text-4xl md:text-6xl font-bold mb-6">
-            <span class="text-black/90 text-shadow-lg">Saloo & Neena Chowdhury</span>
-          </h1>
-          <p class="text-xl md:text-2xl text-gray-900 mb-4 max-w-3xl mx-auto">
-            First and fastest circumnavigators of the globe by car
-          </p>
-          <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Covering six continents in their trusted Hindustan Ambassador • Guinness World Record holders from Kolkata, India
-          </p>
-          
-          <!-- Key Stats -->
-          <div class="grid grid-cols-3 gap-3 md:gap-6 mb-6 md:mb-8 max-w-4xl mx-auto px-4">
-            <div class="bg-white/70 md:bg-white/80 backdrop-blur-sm p-2 md:p-4 rounded-lg shadow-lg">
-              <div class="text-lg md:text-2xl font-bold text-blue-600">39 Days</div>
-              <div class="text-xs md:text-sm text-gray-600 hidden sm:block">20 hours, 15 minutes</div>
-              <div class="text-[10px] md:text-xs text-gray-500">Fastest Record</div>
-            </div>
-            <div class="bg-white/70 md:bg-white/80 backdrop-blur-sm p-2 md:p-4 rounded-lg shadow-lg">
-              <div class="text-lg md:text-2xl font-bold text-blue-600">6 Continents</div>
-              <div class="text-xs md:text-sm text-gray-600 hidden sm:block">40,535 km covered</div>
-              <div class="text-[10px] md:text-xs text-gray-500">Complete route</div>
-            </div>
-            <div class="bg-white/70 md:bg-white/80 backdrop-blur-sm p-2 md:p-4 rounded-lg shadow-lg">
-              <div class="text-lg md:text-2xl font-bold text-blue-600">First Ever</div>
-              <div class="text-xs md:text-sm text-gray-600 hidden sm:block">By car (1989)</div>
-              <div class="text-[10px] md:text-xs text-gray-500">World Record</div>
-            </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <!-- Badge -->
+          <div class="flex justify-center mb-8 animate-bounce" style="animation-duration: 2s;">
+              <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 px-6 py-3 rounded-full font-bold text-sm shadow-2xl">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                  <span>Guinness World Record Holders</span>
+              </div>
           </div>
 
-          <div class="flex sm:flex-row gap-3 md:gap-4 justify-center px-4">
-            <NuxtLink to="/journeys" class="btn-primary text-sm md:text-base py-2 md:py-3">
-              <iconify-icon icon="lucide:map" class="mr-2"></iconify-icon>
-              Explore Journeys
-            </NuxtLink>
-            <NuxtLink to="/about" class="btn-secondary text-sm md:text-base py-2 md:py-3">
-              <iconify-icon icon="lucide:users" class="mr-2"></iconify-icon>
-              About Us
-            </NuxtLink>
+          <!-- Title -->
+          <div class="text-center mb-14">
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-amber-300 via-orange-400 to-amber-300 bg-clip-text text-transparent mb-4">
+              Saloo & Neena Choudhury
+          </h1>
+          <p class="px-6 text-lg sm:text-xl md:text-2xl text-amber-200">
+              Pioneers of World Record Circumnavigation · Two Champions · One Legacy
+          </p>
           </div>
-        </div>
+
+          <!-- ================= CERTIFICATES LAYOUT ================= -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+
+          <!-- ================= SALOO COLUMN ================= -->
+          <div>
+              <div class="text-center mb-6">
+              <h3 class="text-3xl font-bold bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent">
+                  Saloo Choudhury
+              </h3>
+              <p class="text-amber-200 mt-1">2 Guinness World Records</p>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <!-- Certificate 1 -->
+              <div>
+                  <p class="text-center text-sm text-amber-300 mb-2 font-semibold">Certificate #1</p>
+                  <div class="rounded-3xl bg-slate-900/80 border border-amber-500/40 p-5 hover:scale-[1.03] transition">
+                  <img src="/images/guinness/Saloo-First-and-Fastest-Circumnavigation.jpg"
+                      class="rounded-xl h-full w-full object-cover mb-4" alt="">
+                  <span class="inline-block text-xs px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full mb-2">9 Sep - 17 Nov 1989</span>
+                  <p class="font-semibold text-amber-200 text-sm">First & Fastest Circumnavigation</p>
+                  </div>
+              </div>
+
+              <!-- Certificate 2 -->
+              <div>
+                  <p class="text-center text-sm text-amber-300 mb-2 font-semibold">Certificate #2</p>
+                  <div class="rounded-3xl bg-slate-900/80 border border-amber-500/40 p-5 hover:scale-[1.03] transition">
+                  <img src="/images/guinness/Saloo-Fastest-Circumnavigation.jpg"
+                      class="rounded-xl h-full w-full object-cover mb-4" alt="">
+                  <span class="inline-block text-xs px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full mb-2">7 Nov - 17 Dec 1991</span>
+                  <p class="font-semibold text-amber-200 text-sm">Fastest Circumnavigation</p>
+                  </div>
+              </div>
+              </div>
+          </div>
+
+          <!-- ================= NEENA COLUMN ================= -->
+          <div>
+              <div class="text-center mb-6">
+              <h3 class="text-3xl font-bold bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">
+                  Neena Choudhury
+              </h3>
+              <p class="text-orange-200 mt-1">2 Guinness World Records</p>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <!-- Certificate 1 -->
+              <div>
+                  <p class="text-center text-sm text-orange-300 mb-2 font-semibold">Certificate #1</p>
+                  <div class="rounded-3xl bg-slate-900/80 border border-orange-500/40 p-5 hover:scale-[1.03] transition">
+                  <img src="/images/guinness/Neena-First-and-Fastest-Circumnavigation.jpg"
+                      class="rounded-xl h-full w-full object-cover mb-4" alt="">
+                  <span class="inline-block text-xs px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full mb-2">9 Sep - 17 Nov 1989</span>
+                  <p class="font-semibold text-orange-200 text-sm">First & Fastest Circumnavigation</p>
+                  </div>
+              </div>
+
+              <!-- Certificate 2 -->
+              <div>
+                  <p class="text-center text-sm text-orange-300 mb-2 font-semibold">Certificate #2</p>
+                  <div class="rounded-3xl bg-white-900/80 border border-orange-500/40 p-5 hover:scale-[1.03] transition">
+                  <img src="/images/guinness/Neena-Fastest-Circumnavigation.jpg"
+                      class="rounded-xl h-full w-full object-cover mb-4" alt="">
+                  <span class="inline-block text-xs px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full mb-2">7 Nov - 17 Dec 1991</span>
+                  <p class="font-semibold text-orange-200 text-sm">Neena and Saloo Choudhury</p>
+                  </div>
+              </div>
+              </div>
+          </div>
+
+          </div>
+
+          <!-- CTA -->  
+
       </div>
       <!-- Animated Ambassador Car SVG -->
       <div class="absolute inset-0 opacity-20">
@@ -66,134 +120,15 @@
         <iconify-icon icon="lucide:chevron-down" class="text-2xl text-gray-400"></iconify-icon>
       </div>
     </section>
+
+    <!-- About Section -->
+    <AboutSaloo />
     <!-- Guinness Records -->
-     <section class="py-16 bg-whit">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold text-gray-900 text-center mb-12"> Guinness World Records </h2>
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-xl border-2 border-yellow-200 ">
-                <div class="flex items-center mb-4">
-                  <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-8 w-8 text-white lucide-trophy-icon lucide-trophy h-8 w-8 text-white">
-                        <path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"></path>
-                        <path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"></path>
-                        <path d="M18 9h1.5a1 1 0 0 0 0-5H18"></path>
-                        <path d="M4 22h16"></path>
-                        <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"></path>
-                        <path d="M6 9H4.5a1 1 0 0 1 0-5H6"></path>
-                      </svg>
-                  </div>
-                  <div>
-                      <div class="text-sm text-yellow-700 font-medium"> GUINNESS WORLD RECORD </div>
-                      <div class="text-lg font-bold text-gray-900">December 17, 1991</div>
-                  </div>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Defeating British Army Record</h3>
-                <p class="text-gray-700 mb-4">Successfully defeated the British Army circumnavigation record, proving civilian capability over military advantages.</p>
-                <div class="grid grid-cols-2 gap-4">
-                  <div class="text-center">
-                      <div class="text-lg font-bold text-gray-900 ">40,535 km</div>
-                      <div class="text-sm text-gray-600 dark:text-gray-400 capitalize">distance</div>
-                  </div>
-                  <div class="text-center">
-                      <div class="text-lg font-bold text-gray-900">39 days, 20 hours, 15 minutes</div>
-                      <div class="text-sm text-gray-600 dark:text-gray-400 capitalize">time</div>
-                  </div>
-                  <div class="text-center">
-                      <div class="text-lg font-bold text-gray-900 ">3 hours 45 minutes faster than British Army</div>
-                      <div class="text-sm text-gray-600 dark:text-gray-400 capitalize">improvement</div>
-                  </div>
-                  <div class="text-center">
-                      <div class="text-lg font-bold text-gray-900">1991</div>
-                      <div class="text-sm text-gray-600 dark:text-gray-400 capitalize">year</div>
-                  </div>
-                </div>
-            </div>
-            <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-xl border-2 border-yellow-200">
-                <div class="flex items-center mb-4">
-                  <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-8 w-8 text-white lucide-trophy-icon lucide-trophy h-8 w-8 text-white">
-                        <path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"></path>
-                        <path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"></path>
-                        <path d="M18 9h1.5a1 1 0 0 0 0-5H18"></path>
-                        <path d="M4 22h16"></path>
-                        <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"></path>
-                        <path d="M6 9H4.5a1 1 0 0 1 0-5H6"></path>
-                      </svg>
-                  </div>
-                  <div>
-                      <div class="text-sm text-yellow-700 font-medium"> GUINNESS WORLD RECORD </div>
-                      <div class="text-lg font-bold text-gray-900">March 11, 1989</div>
-                  </div>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Guinness World Record - First and Fastest Circumnavigation</h3>
-                <p class="text-gray-700 mb-4">Officially recognized by Guinness Book of World Records as the first and fastest circumnavigators of the globe covering six continents.</p>
-                <div class="grid grid-cols-2 gap-4">
-                  <div class="text-center">
-                      <div class="text-lg font-bold text-gray-900">45,000 km</div>
-                      <div class="text-sm text-gray-600 capitalize">distance</div>
-                  </div>
-                  <div class="text-center">
-                      <div class="text-lg font-bold text-gray-900">69 days, 19 hours, 5 minutes</div>
-                      <div class="text-sm text-gray-600 capitalize">time</div>
-                  </div>
-                  <div class="text-center">
-                      <div class="text-lg font-bold text-gray-900">6</div>
-                      <div class="text-sm text-gray-600 capitalize">continents</div>
-                  </div>
-                  <div class="text-center">
-                      <div class="text-lg font-bold text-gray-900">1989</div>
-                      <div class="text-sm text-gray-600 capitalize">year</div>
-                  </div>
-                </div>
-            </div>
-          </div>
-      </div>
-    </section>
-    <!-- Ambassador Car Heritage Section -->
-    <section class="section-padding bg-gradient-to-r from-gray-50 to-blue-50">
-      <div class="container-max">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">The Legendary Ambassador</h2>
-            <p class="text-lg text-gray-600 mb-6">
-              Our trusted companion for both world record journeys was the iconic Hindustan Ambassador - 
-              a car that became synonymous with Indian motor rallying excellence.
-            </p>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <iconify-icon icon="lucide:check-circle" class="text-green-600 mt-1 mr-3"></iconify-icon>
-                <div>
-                  <h4 class="font-semibold">Reliability Champion</h4>
-                  <p class="text-gray-600">Withstood extreme conditions across six continents</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <iconify-icon icon="lucide:check-circle" class="text-green-600 mt-1 mr-3"></iconify-icon>
-                <div>
-                  <h4 class="font-semibold">Indian Engineering</h4>
-                  <p class="text-gray-600">Proved Indian automotive excellence on the world stage</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <iconify-icon icon="lucide:check-circle" class="text-green-600 mt-1 mr-3"></iconify-icon>
-                <div>
-                  <h4 class="font-semibold">Rally Heritage</h4>
-                  <p class="text-gray-600">The car that made circumnavigation history</p>
-                </div>
-              </div>
-            </div>
-            <NuxtLink to="/blog/car-that-conquered-world" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium mt-6">
-              Read the Ambassador Story
-              <iconify-icon icon="lucide:arrow-right" class="ml-2"></iconify-icon>
-            </NuxtLink>
-          </div>
-          <div class="relative">
-            <AmbassadorCarShowcase />
-          </div>
-        </div>
-      </div>
-    </section>
+
+    <!-- The Choudhury Trophy Section -->
+    <ChoudhuryTrophy />
+    <!-- Contessa Classic Car Section -->
+    <ContessaClassicCar />
 
     <!-- Featured Achievements -->
     <section class="section-padding bg-white">
@@ -236,6 +171,12 @@
       </div>
     </section>
 
+    <!-- Timeline Teaser Section -->
+    <TimelineTeaser />
+
+    <!-- Gallery Preview Section -->
+     <GalleryPreview />
+
     <!-- Recent Journeys -->
     <section class="section-padding bg-gray-50">
       <div class="container-max">
@@ -253,10 +194,10 @@
             :journey="journey"
           />
         </div>
-        
+        <!-- CTA -->
         <div class="text-center mt-12">
-          <NuxtLink to="/journeys" class="btn-primary">
-            View All Journeys
+          <NuxtLink to="/journeys" class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 font-bold text-lg shadow-2xl hover:scale-110 transition">
+              Explore Their Journey →
           </NuxtLink>
         </div>
       </div>
@@ -265,6 +206,11 @@
 </template>
 
 <script setup>
+import ContessaClassicCar from '@/components/sections/ContessaClassicCar.vue';
+import AboutSaloo from '@/components/sections/AboutSaloo.vue';
+import ChoudhuryTrophy from '../components/sections/ChoudhuryTrophy.vue';
+import TimelineTeaser from '@/components/sections/TimelineTeaser.vue';
+import GalleryPreview from '../components/sections/GalleryPreview.vue';
 useSeoMeta({
   title: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
   description: 'First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders from Kolkata, India.',
