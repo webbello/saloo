@@ -5,7 +5,7 @@ date: '2024-03-05'
 author: 'Saloo Chowdhury'
 category: 'Journey Stories'
 featured: true
-image: '/images/blog/beating-british-army.jpg'
+image: '/images/gallery/Scan10.jpg'
 tags: ['1991', 'british army', 'record breaking', 'military', 'competition']
 ---
 
