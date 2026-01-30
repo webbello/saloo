@@ -127,7 +127,7 @@ const featuredJourneys = [
     id: 1,
     title: 'First Circumnavigation (1989)',
     description: 'The historic first journey that established them as the first circumnavigators.',
-    image: '/images/journey-1989.jpg',
+    image: '/images/journey/Saloo-Journey1.jpg',
     duration: '69 days, 19 hours, 5 minutes',
     distance: '45,000 km'
   },
@@ -135,7 +135,7 @@ const featuredJourneys = [
     id: 2,
     title: 'Record Breaking Journey (1991)',
     description: 'The journey that broke the British Army record and secured their place in history.',
-    image: '/images/journey-1991.jpg',
+    image: '/images/journey/Saloo-Journey2.jpg',
     duration: '39 days, 20 hours, 15 minutes',
     distance: '40,535 km'
   },
@@ -143,7 +143,7 @@ const featuredJourneys = [
     id: 3,
     title: 'Australian Adventure',
     description: 'Facing wild horses and challenging terrain across the Australian continent.',
-    image: '/images/journey-australia.jpg',
+    image: '/images/journey/Saloo-Journey3.jpg',
     duration: '7 days',
     distance: '8,500 km'
   }

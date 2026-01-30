@@ -5,11 +5,7 @@
         <NuxtLink to="/" class="flex items-center space-x-2">
           <iconify-icon icon="lucide:globe" class="text-xl sm:text-2xl text-amber-600"></iconify-icon>
           <!-- Logo -->
-            <div class="flex-shrink-0">
-                <div class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
-                    S&N Choudhury
-                </div>
-            </div>
+            
         </NuxtLink>
         
         <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
