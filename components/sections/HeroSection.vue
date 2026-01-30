@@ -1,10 +1,9 @@
 <template>
 <section class="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-amber-950 text-white pt-24 overflow-hidden">
       
-      <!-- Animated Gradient Orbs -->
+    <!-- Animated Gradient Orbs -->
     <div class="absolute top-20 right-10 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse"></div>
     <div class="absolute bottom-20 left-10 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-        
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -93,7 +92,7 @@
                 <img src="/images/guinness/Neena-Fastest-Circumnavigation.jpg"
                     class="rounded-xl h-full w-full object-cover mb-4" alt="">
                 <span class="inline-block text-xs px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full mb-2">7 Nov - 17 Dec 1991</span>
-                <p class="font-semibold text-orange-200 text-sm">Neena and Saloo Choudhury</p>
+                <p class="font-semibold text-orange-200 text-sm">Fastest Circumnavigation</p>
                 </div>
             </div>
             </div>
@@ -102,18 +101,13 @@
         </div>
 
         <!-- CTA -->
-        <div class="text-center mt-16">
-        <a href="/journey"
-            class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 font-bold text-lg shadow-2xl hover:scale-110 transition">
-            Explore Their Journey →
-        </a>
-        </div>
+        
 
     </div>
       <!-- Animated Ambassador Car SVG -->
-      <div class="absolute inset-0 opacity-20">
+      <!-- <div class="absolute inset-0 opacity-20">
         <AmbassadorCarAnimation />
-      </div>
+      </div> -->
       
       <!-- Globe Animation Background -->
       <div class="absolute inset-0 opacity-10">
