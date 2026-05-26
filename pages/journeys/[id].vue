@@ -163,7 +163,7 @@ const journey = computed(() => {
 
 // SEO
 useSeoMeta({
-  title: journey.value ? `${journey.value.title} - Saloo & Neena Chowdhury` : 'Journey Not Found',
+  title: journey.value ? `${journey.value.title} - Saloo & Neena Choudhury` : 'Journey Not Found',
   description: journey.value?.description || 'Journey details not found'
 })
 </script>

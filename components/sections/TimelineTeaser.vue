@@ -70,7 +70,7 @@
                                 <div class="hidden md:block">
                                     <div class="inline-block px-4 py-2 bg-amber-600 text-white rounded-full font-bold text-xl mb-4 shadow-lg">1991</div>
                                     <h3 class="text-2xl font-bold mb-3">British Army Challenge</h3>
-                                    <p class="text-gray-200 mb-4 leading-relaxed">The British Army accomplishes circumnavigation in 40 days, leading Guinness to drop the "first" title from the Chowdhurys' record.</p>
+                                    <p class="text-gray-200 mb-4 leading-relaxed">The British Army accomplishes circumnavigation in 40 days, leading Guinness to drop the "first" title from the Choudhurys' record.</p>
                                     <p class="text-sm text-amber-600 font-semibold mb-4">📍 Global</p>
                                     <div class="space-y-2">
                                         <div class="inline-flex items-center gap-2 bg-amber-50 px-3 py-1 rounded-full text-sm text-amber-700 mr-2 mb-2">
@@ -92,7 +92,7 @@
                                 <div class="md:hidden mb-4">
                                     <div class="inline-block px-4 py-2 bg-amber-600 text-white rounded-full font-bold text-lg mb-3 shadow-lg">1991</div>
                                     <h3 class="text-xl font-bold mb-2">British Army Challenge</h3>
-                                    <p class="text-gray-200 mb-3 text-sm leading-relaxed">The British Army accomplishes circumnavigation in 40 days, leading Guinness to drop the "first" title from the Chowdhurys' record.</p>
+                                    <p class="text-gray-200 mb-3 text-sm leading-relaxed">The British Army accomplishes circumnavigation in 40 days, leading Guinness to drop the "first" title from the Choudhurys' record.</p>
                                     <p class="text-xs text-amber-600 font-semibold mb-3">📍 Global</p>
                                     <div class="space-y-2 mb-4">
                                         <div class="flex items-center gap-2 text-xs text-gray-300">• Army had significant advantages</div>

@@ -2,7 +2,7 @@
 title: 'Breaking the British Army Record'
 description: 'How we reclaimed our title and set a new world record in 1991.'
 date: '2024-01-10'
-author: 'Neena Chowdhury'
+author: 'Neena Choudhury'
 category: 'World Records'
 featured: true
 image: '/images/journey/Saloo-Journey3.jpg'

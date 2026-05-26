@@ -2,7 +2,7 @@
 title: 'Wild Encounters in Australia'
 description: 'Our most memorable and dangerous moments during the Australian leg of our journey.'
 date: '2024-01-05'
-author: 'Neena Chowdhury'
+author: 'Neena Choudhury'
 category: 'Adventures'
 featured: false
 image: '/images/journey/Saloo-Journey8.jpg'

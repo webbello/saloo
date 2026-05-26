@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://saloo-neena.com/sitemap.xml
+Sitemap: https://salooneenachoudhury.com/sitemap.xml
 
 # Disallow admin or private areas (if any)
 # Disallow: /admin/

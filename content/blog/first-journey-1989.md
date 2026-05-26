@@ -2,7 +2,7 @@
 title: 'The First Journey: Breaking New Ground'
 description: 'The story of our first circumnavigation attempt in 1989 that changed everything.'
 date: '2024-01-15'
-author: 'Saloo Chowdhury'
+author: 'Saloo Choudhury'
 category: 'Journey Stories'
 featured: true
 image: '/images/journey/Saloo-Journey1.jpg'

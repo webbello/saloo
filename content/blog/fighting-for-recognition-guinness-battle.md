@@ -2,7 +2,7 @@
 title: 'Fighting for Recognition: Our Battle with Guinness World Records'
 description: 'The untold story of our legal battle with Guinness World Records for proper recognition as the first circumnavigators of the globe by car.'
 date: '2024-03-15'
-author: 'Saloo Chowdhury'
+author: 'Saloo Choudhury'
 category: 'Achievements'
 featured: true
 image: '/images/journey/Saloo-Journey4.jpg'
@@ -41,7 +41,7 @@ The court understood the gravity of the situation. Based on our petition, they p
 
 Immediately after the court order, Guinness officials approached us. They promised they would include our record properly in future editions. More than that, they promised something extraordinary - they would hold a rally in 2000 called the "Millennium Challenge" to honor our feat.
 
-We had detailed discussions, and it was mutually agreed that a trophy would be instituted in the name of Saloo Chowdhury. Believing in their good faith, we withdrew our petition.
+We had detailed discussions, and it was mutually agreed that a trophy would be instituted in the name of Saloo Choudhury. Believing in their good faith, we withdrew our petition.
 
 But in March 2001, the company informed us that "for good reasons" they were not in a position to fund the event. We had been planning to participate and had even paid more than US$11,000 as entry fee.
 

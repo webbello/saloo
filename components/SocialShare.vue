@@ -53,7 +53,7 @@
 const props = defineProps({
   title: {
     type: String,
-    default: 'Saloo & Neena Chowdhury - World Record Circumnavigators'
+    default: 'Saloo & Neena Choudhury - World Record Circumnavigators'
   },
   description: {
     type: String,
@@ -67,7 +67,7 @@ const props = defineProps({
 
 const route = useRoute()
 const currentUrl = computed(() => {
-  return props.url || `https://saloo-neena.com${route.path}`
+  return props.url || `https://salooneenachoudhury.com${route.path}`
 })
 
 const shareOnFacebook = () => {
