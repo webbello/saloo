@@ -84,6 +84,37 @@
         </div>
       </div>
     </section>
+    <!-- GEO / FAQ Section -->
+    <section class="section-padding bg-white">
+      <div class="container-max max-w-4xl">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Common questions about Saloo & Neena Choudhury and their world record achievements.</p>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-2">Who are Saloo & Neena Choudhury?</h3>
+            <p class="text-gray-700">Saloo & Neena Choudhury are Guinness World Record holders from Kolkata, India. They are recognized as the first and fastest circumnavigators of the globe by car, covering six continents in their Hindustan Ambassador.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-2">What world records do Saloo & Neena Choudhury hold?</h3>
+            <p class="text-gray-700">They hold the Guinness World Record for being the first and fastest people to circumnavigate the globe by car. In 1989, they completed the first circumnavigation in 69 days, 19 hours, and 5 minutes. In 1991, they broke their own record, completing the journey in 39 days, 20 hours, and 15 minutes.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-2">What car did Saloo & Neena Choudhury use for their journey?</h3>
+            <p class="text-gray-700">They drove a Hindustan Ambassador, an iconic Indian automobile, on both their record-breaking circumnavigation journeys across six continents, demonstrating Indian automotive engineering on the global stage.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-2">How many continents did they cover?</h3>
+            <p class="text-gray-700">They covered six continents: Asia, Europe, North America, South America, Africa, and Australia, traveling over 45,000 kilometers during their first journey.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-2">What is the Choudhury Trophy?</h3>
+            <p class="text-gray-700">The Choudhury Trophy is the Guinness World Records Road Challenge trophy named in honor of Saloo & Neena Choudhury, recognizing their pioneering contribution to motor rallying and circumnavigation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -120,6 +151,62 @@ useSeoMeta({
   // Optional but recommended
   robots: 'index, follow',
   canonical: 'https://salooneenachoudhury.com'
+})
+
+const siteUrl = 'https://salooneenachoudhury.com'
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Who are Saloo & Neena Choudhury?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Saloo & Neena Choudhury are Guinness World Record holders from Kolkata, India. They are the first and fastest circumnavigators of the globe by car, covering six continents in their Hindustan Ambassador.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What world record do Saloo & Neena Choudhury hold?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'They hold the Guinness World Record for being the first and fastest circumnavigators of the globe by car. In 1989 they completed the first circumnavigation in 69 days, and in 1991 they broke the record in 39 days, 20 hours, 15 minutes.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What car did Saloo & Neena Choudhury use?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'They drove a Hindustan Ambassador, an Indian-made car, on their record-breaking circumnavigation journeys across six continents.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How many continents did Saloo & Neena Choudhury cover?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'They covered six continents: Asia, Europe, North America, South America, Africa, and Australia.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the Choudhury Trophy?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The Choudhury Trophy is the Guinness World Records Road Challenge trophy named in honor of Saloo & Neena Choudhury for their pioneering circumnavigation achievement.'
+            }
+          }
+        ]
+      })
+    }
+  ]
 })
 
 const featuredJourneys = [

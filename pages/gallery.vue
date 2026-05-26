@@ -141,10 +141,44 @@
 import ArchivalVideo from '@/components/ArchivalVideo.vue'
 import { archivalVideos } from '@/config/archivalVideos'
 import { siteConfig } from '~/config/site'
+const siteUrl = 'https://salooneenachoudhury.com'
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 useSeoMeta({
   title: 'Gallery - Saloo & Neena Choudhury Photo Collection',
   description: 'Browse through our extensive photo gallery capturing moments from record-breaking circumnavigation journeys across six continents.',
-  ogTitle: 'Gallery - Saloo & Neena Choudhury Photo Collection'
+  ogTitle: 'Gallery - Saloo & Neena Choudhury Photo Collection',
+  ogDescription: 'Browse through our extensive photo gallery capturing moments from record-breaking circumnavigation journeys across six continents.',
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Saloo and Neena Choudhury photo gallery',
+  ogUrl: `${siteUrl}/gallery`,
+  ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Gallery - Saloo & Neena Choudhury Photo Collection',
+  twitterDescription: 'Browse through our extensive photo gallery capturing moments from record-breaking circumnavigation journeys across six continents.',
+  twitterImage: ogImage,
+  twitterImageAlt: 'Saloo and Neena Choudhury photo gallery'
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}/gallery` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Gallery', item: `${siteUrl}/gallery` }
+        ]
+      })
+    }
+  ]
 })
 
 const activeCategory = ref('all')

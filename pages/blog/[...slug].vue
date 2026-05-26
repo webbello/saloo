@@ -64,6 +64,7 @@
             <SocialShare 
               :title="data.title"
               :description="data.description"
+              :image="data.image || 'https://salooneenachoudhury.com/images/gallery/og-image.jpg'"
             />
           </div>
         </footer>
@@ -142,17 +143,73 @@ const { data: surround } = await useAsyncData(`blog-surround-${route.path}`, () 
 const prev = computed(() => surround.value?.prev ?? null)
 const next = computed(() => surround.value?.next ?? null)
 
+const siteUrl = 'https://salooneenachoudhury.com'
+const defaultOgImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 // SEO Meta
 useSeoMeta({
   title: data.value.title,
   description: data.value.description,
   ogTitle: data.value.title,
   ogDescription: data.value.description,
-  ogImage: data.value.image,
+  ogImage: data.value.image || defaultOgImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: data.value.title,
+  ogUrl: `${siteUrl}${route.path}`,
   ogType: 'article',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
   articleAuthor: data.value.author,
   articlePublishedTime: data.value.date,
-  twitterCard: 'summary_large_image'
+  articleTag: data.value.tags?.join(',') || '',
+  twitterCard: 'summary_large_image',
+  twitterTitle: data.value.title,
+  twitterDescription: data.value.description,
+  twitterImage: data.value.image || defaultOgImage,
+  twitterImageAlt: data.value.title
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}${route.path}` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
+          { '@type': 'ListItem', position: 3, name: data.value.title, item: `${siteUrl}${route.path}` }
+        ]
+      })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: data.value.title,
+        description: data.value.description,
+        author: {
+          '@type': 'Person',
+          name: data.value.author
+        },
+        datePublished: data.value.date,
+        dateModified: data.value.date,
+        image: data.value.image || defaultOgImage,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Saloo & Neena Choudhury'
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `${siteUrl}${route.path}`
+        }
+      })
+    }
+  ]
 })
 
 // Format date

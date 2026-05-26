@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-01-13',
-  ssr: false,
+  ssr: true,
   modules: [
     '@nuxt/content',
     '@vueuse/nuxt'
@@ -43,7 +43,9 @@ export default defineNuxtConfig({
         { property: 'og:image', content: 'https://salooneenachoudhury.com/images/gallery/og-image.jpg' },
         { property: 'og:site_name', content: 'Saloo & Neena Choudhury' },
         { name: 'twitter:creator', content: '@SalooNeena' },
-        { name: 'theme-color', content: '#3b82f6' }
+        { name: 'theme-color', content: '#3b82f6' },
+        { name: 'google-site-verification', content: 'kD5mOhlG8OvFI2x1Ns2GIZLZIf4v7H-HYjxkCR28XkU' }
+        
       ],
       link: [
         { rel: 'canonical', href: 'https://salooneenachoudhury.com' },
@@ -58,28 +60,35 @@ export default defineNuxtConfig({
           type: 'application/ld+json',
           innerHTML: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Saloo Choudhury",
-            "alternateName": "Neena Choudhury",
-            "description": "World Record Holders - First and fastest circumnavigators of the globe by car",
+            "@type": "WebSite",
+            "name": "Saloo & Neena Choudhury",
             "url": "https://salooneenachoudhury.com",
-            "sameAs": [
-              "https://www.guinnessworldrecords.com"
-            ],
-            "knowsAbout": [
-              "Motor Rally",
-              "Circumnavigation",
-              "World Records",
-              "Adventure Travel",
-              "Guinness World Records"
-            ],
-            "award": [
-              "Guinness World Record - First Circumnavigation by Car (1989)",
-              "Guinness World Record - Fastest Circumnavigation by Car (1991)"
-            ],
-            "birthPlace": {
-              "@type": "Place",
-              "name": "Kolkata, India"
+            "description": "First and fastest circumnavigators of the globe by car",
+            "alternativeHeadline": "Guinness World Record Holders from Kolkata, India",
+            "about": {
+              "@type": "Person",
+              "name": "Saloo Choudhury",
+              "alternateName": "Neena Choudhury",
+              "description": "World Record Holders - First and fastest circumnavigators of the globe by car",
+              "url": "https://salooneenachoudhury.com",
+              "sameAs": [
+                "https://www.guinnessworldrecords.com"
+              ],
+              "knowsAbout": [
+                "Motor Rally",
+                "Circumnavigation",
+                "World Records",
+                "Adventure Travel",
+                "Guinness World Records"
+              ],
+              "award": [
+                "Guinness World Record - First Circumnavigation by Car (1989)",
+                "Guinness World Record - Fastest Circumnavigation by Car (1991)"
+              ],
+              "birthPlace": {
+                "@type": "Place",
+                "name": "Kolkata, India"
+              }
             }
           })
         }
@@ -100,9 +109,15 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'github-pages',
     prerender: {
-      routes: ['/'], // Add your routes here
-      crawlLinks: true, // This will crawl and prerender all linked pages
-
+      routes: [
+        '/', '/about', '/timeline', '/journeys', '/achievements', '/gallery', '/blog', '/contact', '/sitemap.xml',
+        '/journeys/1', '/journeys/2', '/journeys/3', '/journeys/4', '/journeys/5', '/journeys/6',
+        '/blog/first-journey-1989', '/blog/breaking-army-record', '/blog/australia-wild-encounters',
+        '/blog/guinness-world-record-story', '/blog/partnership-that-conquered-world',
+        '/blog/beating-british-army-record', '/blog/six-continents-countless-memories',
+        '/blog/car-that-conquered-world', '/blog/fighting-for-recognition-guinness-battle'
+      ],
+      crawlLinks: true,
     }
   },
   

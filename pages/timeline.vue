@@ -110,6 +110,7 @@ const timelineEvents = [
 
 const siteUrl = 'https://salooneenachoudhury.com'
 const pageUrl = `${siteUrl}/timeline`
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
 
 useSeoMeta({
   title: 'Timeline - Saloo & Neena Choudhury Journey',
@@ -118,18 +119,36 @@ useSeoMeta({
   ogTitle: 'Timeline - Saloo & Neena Choudhury Journey',
   ogDescription:
     "Chronological timeline of Saloo & Neena Choudhury's record-breaking circumnavigation journeys and achievements.",
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Saloo and Neena Choudhury journey timeline',
   ogUrl: pageUrl,
   ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Timeline - Saloo & Neena Choudhury Journey',
   twitterDescription:
     "Chronological timeline of Saloo & Neena Choudhury's record-breaking circumnavigation journeys and achievements.",
-  twitterImage: `${siteUrl}/images/gallery/og-image.jpg`
+  twitterImage: ogImage,
+  twitterImageAlt: 'Saloo and Neena Choudhury journey timeline'
 })
 
 useHead({
   link: [{ rel: 'canonical', href: pageUrl }],
   script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Timeline', item: pageUrl }
+        ]
+      })
+    },
     {
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
