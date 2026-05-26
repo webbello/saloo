@@ -1,7 +1,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-01-13',
   ssr: false,
-  target: 'static',
   modules: [
     '@nuxt/content',
     '@vueuse/nuxt'
@@ -92,9 +91,9 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'github-dark'
     },
-    // Important: Configure content for static generation
+    // Use Node.js built-in sqlite (Node 22.5+) — no native module compile needed
     experimental: {
-      clientDB: true // Enable client-side content database
+      nativeSqlite: true
     }
   },
 
