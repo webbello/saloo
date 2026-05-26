@@ -1,6 +1,6 @@
 <template>
   <NuxtLink 
-    :to="post._path"
+    :to="post.path"
     class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ring-1 ring-red-100/60"
     :class="featured ? 'md:col-span-1' : ''"
   >

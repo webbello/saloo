@@ -72,9 +72,9 @@
         <section v-if="relatedPosts.length > 0" class="mt-16">
           <h2 class="text-2xl font-bold mb-8">Related Stories</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <BlogCard 
-              v-for="post in relatedPosts" 
-              :key="post._path"
+            <BlogCard
+              v-for="post in relatedPosts"
+              :key="post.path"
               :post="post"
             />
           </div>
@@ -82,9 +82,9 @@
 
         <!-- Navigation -->
         <nav class="mt-12 flex justify-between">
-          <NuxtLink 
-            v-if="prev" 
-            :to="prev._path"
+          <NuxtLink
+            v-if="prev"
+            :to="prev.path"
             class="flex items-center text-blue-600 hover:text-blue-700"
           >
             <iconify-icon icon="lucide:arrow-left" class="mr-2"></iconify-icon>
@@ -94,9 +94,9 @@
             </div>
           </NuxtLink>
           
-          <NuxtLink 
-            v-if="next" 
-            :to="next._path"
+          <NuxtLink
+            v-if="next"
+            :to="next.path"
             class="flex items-center text-blue-600 hover:text-blue-700 text-right"
           >
             <div>
@@ -114,40 +114,44 @@
 <script setup>
 const route = useRoute()
 
-// Fetch the current post with error handling
-const data = await queryContent(route.path).findOne().catch(() => null)
+// Fetch the current post
+const { data } = await useAsyncData(`blog-post-${route.path}`, () =>
+  queryCollection('blog').path(route.path).first()
+)
 
-if (!data) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: 'Blog post not found'
-  })
+if (!data.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Blog post not found' })
 }
 
-// Fetch related posts (same category, excluding current)
-const relatedPosts = await queryContent('/blog')
-  .where({ category: data.category, _path: { $ne: route.path } })
-  .limit(2)
-  .find()
-  .catch(() => [])
+// Related posts: same category, excluding current
+const { data: relatedPosts } = await useAsyncData(`blog-related-${route.path}`, () =>
+  queryCollection('blog')
+    .where('category', '=', data.value?.category ?? '')
+    .where('path', '<>', route.path)
+    .limit(2)
+    .all()
+)
 
-// Get previous and next posts
-const [prev, next] = await queryContent('/blog')
-  .only(['_path', 'title'])
-  .sort({ date: -1 })
-  .findSurround(route.path)
-  .catch(() => [null, null])
+// Prev / next navigation
+const { data: surround } = await useAsyncData(`blog-surround-${route.path}`, () =>
+  queryCollectionItemSurroundings('blog', route.path, {
+    fields: ['title', 'path']
+  })
+)
+
+const prev = computed(() => surround.value?.prev ?? null)
+const next = computed(() => surround.value?.next ?? null)
 
 // SEO Meta
 useSeoMeta({
-  title: data.title,
-  description: data.description,
-  ogTitle: data.title,
-  ogDescription: data.description,
-  ogImage: data.image,
+  title: data.value.title,
+  description: data.value.description,
+  ogTitle: data.value.title,
+  ogDescription: data.value.description,
+  ogImage: data.value.image,
   ogType: 'article',
-  articleAuthor: data.author,
-  articlePublishedTime: data.date,
+  articleAuthor: data.value.author,
+  articlePublishedTime: data.value.date,
   twitterCard: 'summary_large_image'
 })
 
