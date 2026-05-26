@@ -123,6 +123,29 @@
           </div>
         </div>
 
+        <!-- GEO Quick Facts -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold mb-6 text-center">Quick Facts About Saloo & Neena Choudhury</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-blue-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold mb-2">When did they start their first journey?</h3>
+              <p class="text-gray-700">They began their first circumnavigation in 1989, departing from Delhi, India, in their Hindustan Ambassador.</p>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold mb-2">How long did the record-breaking journey take?</h3>
+              <p class="text-gray-700">Their fastest circumnavigation in 1991 took 39 days, 20 hours, and 15 minutes, beating the British Army's record.</p>
+            </div>
+            <div class="bg-green-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold mb-2">Why did they sue Guinness World Records?</h3>
+              <p class="text-gray-700">They filed a case in Calcutta High Court when Guinness dropped their "first" title after the British Army completed a similar journey in 1991.</p>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold mb-2">Are Saloo & Neena still recognized by Guinness?</h3>
+              <p class="text-gray-700">Yes, after winning their legal battle in 1998, Guinness officially recognizes them as the first and fastest circumnavigators in all current and future editions.</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Personal Philosophy -->
         <div class="text-center">
           <blockquote class="text-2xl font-medium text-gray-800 mb-4">
@@ -139,10 +162,84 @@
 import ArchivalVideo from '@/components/ArchivalVideo.vue'
 import { archivalVideos } from '@/config/archivalVideos'
 
+const siteUrl = 'https://salooneenachoudhury.com'
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 useSeoMeta({
   title: 'About Saloo & Neena Choudhury - World Record Circumnavigators',
   description: 'Learn about the pioneering couple from Kolkata who became the first and fastest circumnavigators of the globe by car, covering six continents and breaking world records.',
   ogTitle: 'About Saloo & Neena Choudhury - World Record Circumnavigators',
-  ogDescription: 'Learn about the pioneering couple from Kolkata who became the first and fastest circumnavigators of the globe by car, covering six continents and breaking world records.'
+  ogDescription: 'Learn about the pioneering couple from Kolkata who became the first and fastest circumnavigators of the globe by car, covering six continents and breaking world records.',
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Saloo and Neena Choudhury - Guinness World Record Circumnavigators',
+  ogUrl: `${siteUrl}/about`,
+  ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'About Saloo & Neena Choudhury - World Record Circumnavigators',
+  twitterDescription: 'Learn about the pioneering couple from Kolkata who became the first and fastest circumnavigators of the globe by car, covering six continents and breaking world records.',
+  twitterImage: ogImage,
+  twitterImageAlt: 'Saloo and Neena Choudhury - Guinness World Record Circumnavigators'
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}/about` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'About', item: `${siteUrl}/about` }
+        ]
+      })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Who are Saloo & Neena Choudhury?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Saloo & Neena Choudhury are Guinness World Record holders from Kolkata, India. They are the first and fastest circumnavigators of the globe by car, covering six continents in their Hindustan Ambassador.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How long did the first circumnavigation take?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Their first circumnavigation in 1989 covered 45,000 kilometres in 69 days, 19 hours and 5 minutes.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How did Saloo & Neena win their legal battle with Guinness?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'After a five-year legal battle in the Calcutta High Court, on April 7, 1998, both parties signed an MOU. Guinness consented to recognize the Choudhurys as the first and fastest man and woman in all future editions.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What car did they drive?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'They drove a Hindustan Ambassador, which proved Indian automotive excellence on the global stage during their record-breaking journeys.'
+            }
+          }
+        ]
+      })
+    }
+  ]
 })
 </script>

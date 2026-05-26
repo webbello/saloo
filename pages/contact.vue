@@ -218,10 +218,44 @@
 </template>
 
 <script setup>
+const siteUrl = 'https://salooneenachoudhury.com'
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 useSeoMeta({
   title: 'Contact - Saloo & Neena Choudhury',
   description: 'Get in touch with world record holders Saloo & Neena Choudhury for speaking engagements, interviews, and collaborations.',
-  ogTitle: 'Contact - Saloo & Neena Choudhury'
+  ogTitle: 'Contact - Saloo & Neena Choudhury',
+  ogDescription: 'Get in touch with world record holders Saloo & Neena Choudhury for speaking engagements, interviews, and collaborations.',
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Contact Saloo and Neena Choudhury',
+  ogUrl: `${siteUrl}/contact`,
+  ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Contact - Saloo & Neena Choudhury',
+  twitterDescription: 'Get in touch with world record holders Saloo & Neena Choudhury for speaking engagements, interviews, and collaborations.',
+  twitterImage: ogImage,
+  twitterImageAlt: 'Contact Saloo and Neena Choudhury'
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}/contact` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Contact', item: `${siteUrl}/contact` }
+        ]
+      })
+    }
+  ]
 })
 
 const form = reactive({

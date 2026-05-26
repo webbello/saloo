@@ -186,10 +186,44 @@
 </style>
 
 <script setup>
+const siteUrl = 'https://salooneenachoudhury.com'
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 useSeoMeta({
   title: 'Blog - Saloo & Neena Choudhury Journey Stories',
   description: 'Read inspiring stories and adventures from Saloo & Neena Choudhury\'s record-breaking circumnavigation journeys around the world.',
-  ogTitle: 'Blog - Saloo & Neena Choudhury Journey Stories'
+  ogTitle: 'Blog - Saloo & Neena Choudhury Journey Stories',
+  ogDescription: 'Read inspiring stories and adventures from Saloo & Neena Choudhury\'s record-breaking circumnavigation journeys around the world.',
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Saloo and Neena Choudhury blog',
+  ogUrl: `${siteUrl}/blog`,
+  ogType: 'blog',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Blog - Saloo & Neena Choudhury Journey Stories',
+  twitterDescription: 'Read inspiring stories and adventures from Saloo & Neena Choudhury\'s record-breaking circumnavigation journeys around the world.',
+  twitterImage: ogImage,
+  twitterImageAlt: 'Saloo and Neena Choudhury blog'
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}/blog` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` }
+        ]
+      })
+    }
+  ]
 })
 
 // Fetch blog posts

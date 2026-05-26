@@ -1,0 +1,41 @@
+# Saloo & Neena Choudhury — Guinness World Record Circumnavigators
+
+> First and fastest circumnavigators of the globe by car. Guinness World Record holders from Kolkata, India. Covered six continents in a Hindustan Ambassador.
+
+## About
+- [About Saloo & Neena](https://salooneenachoudhury.com/about): The pioneering couple from Kolkata who made history as the first and fastest circumnavigators of the globe by car, covering six continents and breaking world records.
+
+## Key Facts
+- 1989: First circumnavigation — 45,000 km in 69 days, 19 hours, 5 minutes across six continents
+- 1991: Fastest circumnavigation — 40,535 km in 39 days, 20 hours, 15 minutes (beat British Army by 3h 45m)
+- 1998: Won 5-year legal battle against Guinness World Records for proper recognition
+- Vehicle: Hindustan Ambassador (Indian-made car)
+- Named Honors: Choudhury Trophy — Guinness World Records Road Challenge trophy
+
+## Pages
+- [Home](https://salooneenachoudhury.com): Overview of achievements, featured journeys, and world records
+- [About](https://salooneenachoudhury.com/about): Full story of Saloo & Neena's journey, legal battle, and legacy
+- [Timeline](https://salooneenachoudhury.com/timeline): Chronological journey from 1989 to present
+- [Journeys](https://salooneenachoudhury.com/journeys): Details of 6 major expeditions across six continents
+- [Achievements](https://salooneenachoudhury.com/achievements): Guinness World Records, recognition timeline, and legacy impact
+- [Gallery](https://salooneenachoudhury.com/gallery): Photo collection and archival videos from record-breaking journeys
+- [Blog](https://salooneenachoudhury.com/blog): Stories and insights from adventures around the world
+- [Contact](https://salooneenachoudhury.com/contact): Get in touch for speaking engagements, interviews, and collaborations
+
+## Blog Posts
+- [The First Journey: Breaking New Ground (1989)](https://salooneenachoudhury.com/blog/first-journey-1989): The story of the first circumnavigation attempt that changed everything
+- [Breaking the British Army Record](https://salooneenachoudhury.com/blog/breaking-army-record): How they reclaimed their title and set a new world record in 1991
+- [From Kolkata to the World: Our Guinness World Record Story](https://salooneenachoudhury.com/blog/guinness-world-record-story): How two adventurers from Kolkata became world record holders
+- [Beating the British Army: The 1991 Record That Shocked the World](https://salooneenachoudhury.com/blog/beating-british-army-record): Completing the circumnavigation 3 hours 45 minutes faster than the military team
+- [Fighting for Recognition: Our Battle with Guinness World Records](https://salooneenachoudhury.com/blog/fighting-for-recognition-guinness-battle): The untold legal battle for proper recognition
+- [Six Continents, Countless Memories](https://salooneenachoudhury.com/blog/six-continents-countless-memories): Continent-by-continent account of the record-breaking circumnavigation
+- [The Car That Conquered the World](https://salooneenachoudhury.com/blog/car-that-conquered-world): The Hindustan Ambassador that carried them around the globe twice
+- [The Partnership That Conquered the World](https://salooneenachoudhury.com/blog/partnership-that-conquered-world): How Saloo and Neena supported each other through the ultimate test
+- [Wild Encounters in Australia](https://salooneenachoudhury.com/blog/australia-wild-encounters): Memorable and dangerous moments during the Australian leg
+
+## Structured Data
+- Person: Saloo Choudhury (also Neena Choudhury)
+- Birthplace: Kolkata, India
+- Awards: Guinness World Record — First Circumnavigation by Car (1989), Guinness World Record — Fastest Circumnavigation by Car (1991)
+- SameAs: https://www.guinnessworldrecords.com
+- KnownFor: Motor Rally, Circumnavigation, World Records, Adventure Travel
