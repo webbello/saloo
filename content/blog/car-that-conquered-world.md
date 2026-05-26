@@ -2,7 +2,7 @@
 title: 'The Car That Conquered the World: Our Trusted Companion'
 description: 'Meet the remarkable vehicle that carried us around the globe twice, through extreme conditions and across six continents. The unsung hero of our world records.'
 date: '2024-01-20'
-author: 'Saloo Chowdhury'
+author: 'Saloo Choudhury'
 category: 'Technical Stories'
 featured: false
 image: '/images/journey/Saloo-Journey9.jpg'

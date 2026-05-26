@@ -95,27 +95,27 @@ import TimelineTeaser from '@/components/sections/TimelineTeaser.vue';
 import GalleryPreview from '../components/sections/GalleryPreview.vue';
 import HeroSection from '../components/sections/HeroSection.vue';
 useSeoMeta({
-  title: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
+  title: 'Saloo & Neena Choudhury - World Record Circumnavigators',
   description: 'First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders from Kolkata, India.',
   
   // Add these missing tags
   ogType: 'website',
-  ogSiteName: 'Saloo & Neena Chowdhury',
+  ogSiteName: 'Saloo & Neena Choudhury',
   ogLocale: 'en_US',
   
-  ogTitle: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
+  ogTitle: 'Saloo & Neena Choudhury - World Record Circumnavigators',
   ogDescription: 'First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders from Kolkata, India.',
   ogImage: 'https://salooneenachoudhury.com/images/gallery/og-image.jpg', // Changed to HTTPS
   ogImageWidth: '1200', // Add this
   ogImageHeight: '630', // Add this
-  ogImageAlt: 'Saloo and Neena Chowdhury - Guinness World Record Circumnavigators', // Add this
+  ogImageAlt: 'Saloo and Neena Choudhury - Guinness World Record Circumnavigators', // Add this
   ogUrl: 'https://salooneenachoudhury.com',
   
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
+  twitterTitle: 'Saloo & Neena Choudhury - World Record Circumnavigators',
   twitterDescription: 'First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders from Kolkata, India.',
   twitterImage: 'https://salooneenachoudhury.com/images/gallery/og-image.jpg', // Changed to HTTPS
-  twitterImageAlt: 'Saloo and Neena Chowdhury - Guinness World Record Circumnavigators', // Add this
+  twitterImageAlt: 'Saloo and Neena Choudhury - Guinness World Record Circumnavigators', // Add this
   
   // Optional but recommended
   robots: 'index, follow',

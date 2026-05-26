@@ -1,6 +1,6 @@
-# Saloo & Neena Chowdhury - Journey Website
+# Saloo & Neena Choudhury - Journey Website
 
-A modern, performance-optimized website showcasing the incredible journey and world records of Saloo & Neena Chowdhury, the first and fastest circumnavigators of the globe by car.
+A modern, performance-optimized website showcasing the incredible journey and world records of Saloo & Neena Choudhury, the first and fastest circumnavigators of the globe by car.
 
 ## 🌟 Features
 
@@ -179,11 +179,11 @@ This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgments
 
-- Saloo & Neena Chowdhury for their incredible achievements
+- Saloo & Neena Choudhury for their incredible achievements
 - Guinness World Records for official recognition
 - The adventure and motor rallying community
 - All supporters of their historic journeys
 
 ---
 
-*Built with ❤️ to honor the legacy of world record holders Saloo & Neena Chowdhury*
+*Built with ❤️ to honor the legacy of world record holders Saloo & Neena Choudhury*

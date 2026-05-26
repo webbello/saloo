@@ -2,7 +2,7 @@
 title: 'Beating the British Army: The 1991 Record That Shocked the World'
 description: 'The incredible story of how we broke the British Army record in 1991, completing our circumnavigation 3 hours and 45 minutes faster than the military team.'
 date: '2024-03-05'
-author: 'Saloo Chowdhury'
+author: 'Saloo Choudhury'
 category: 'Journey Stories'
 featured: true
 image: '/images/journey/Saloo-Journey2.jpg'
@@ -24,7 +24,7 @@ We were two adventurers from Kolkata with a dream, a reliable car, and an unshak
   year="1991"
   note="Short highlight reel from the 1991 record run."
   transcript="Transcript coming soon. Key moments from the British Army record challenge."
-  youtube-id="VIDEO_ID_HERE"
+  youtube-id="6hQAYTR95FI"
 />
 
 ## The Pressure

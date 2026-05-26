@@ -187,9 +187,9 @@
 
 <script setup>
 useSeoMeta({
-  title: 'Blog - Saloo & Neena Chowdhury Journey Stories',
-  description: 'Read inspiring stories and adventures from Saloo & Neena Chowdhury\'s record-breaking circumnavigation journeys around the world.',
-  ogTitle: 'Blog - Saloo & Neena Chowdhury Journey Stories'
+  title: 'Blog - Saloo & Neena Choudhury Journey Stories',
+  description: 'Read inspiring stories and adventures from Saloo & Neena Choudhury\'s record-breaking circumnavigation journeys around the world.',
+  ogTitle: 'Blog - Saloo & Neena Choudhury Journey Stories'
 })
 
 // Fetch blog posts

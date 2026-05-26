@@ -4,7 +4,7 @@
       <div class="container-max">
         <!-- Hero Section -->
         <div class="text-center mb-16">
-          <h1 class="text-4xl md:text-5xl font-bold mb-6">About Saloo & Neena Chowdhury</h1>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">About Saloo & Neena Choudhury</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
             The pioneering couple from Kolkata who made history as the first and fastest 
             circumnavigators of the globe by car, covering six continents.
@@ -17,7 +17,7 @@
             <div class="relative">
               <img 
                 src="/images/gallery/Scan8.jpg"
-                alt="Saloo and Neena Chowdhury - World Record Holders"
+                alt="Saloo and Neena Choudhury - World Record Holders"
                 class="rounded-lg shadow-lg w-full"
                 loading="lazy"
               />
@@ -30,7 +30,7 @@
           <div class="space-y-6">
             <h2 class="text-3xl font-bold">World Record Holders</h2>
             <p class="text-gray-700 leading-relaxed">
-              The Guinness Book of World Records has reconfirmed Saloo and Neena Chowdhury of Kolkata 
+              The Guinness Book of World Records has reconfirmed Saloo and Neena Choudhury of Kolkata 
               as the first and fastest circumnavigators of the globe covering six continents. This motor 
               rallyist couple beat the British Army's record with determination and vengeance.
             </p>
@@ -61,7 +61,7 @@
             <p class="leading-relaxed">
               The 'first and fastest' accolade did not come to them easy. For the first time, they covered 
               45,000 kilometres in 69 days, 19 hours and 5 minutes, in 1989. The Guinness Book of World 
-              Records certified Saloo and Neena Chowdhury as the first and fastest circumnavigators of the globe, 
+              Records certified Saloo and Neena Choudhury as the first and fastest circumnavigators of the globe, 
               covering six continents.
             </p>
             
@@ -73,7 +73,7 @@
             </p>
             
             <p class="leading-relaxed">
-              Not ones to give up, the Chowdhurys hit the road again. They were flagged from Delhi on 
+              Not ones to give up, the Choudhurys hit the road again. They were flagged from Delhi on 
               November 7, 1991. This time, they covered 40,535 kilometres in a record time of 39 days, 
               20 hours, 15 minutes — 3 hours and 45 minutes less than the time taken by the army.
             </p>
@@ -98,7 +98,7 @@
             <div>
               <h3 class="text-xl font-semibold mb-4">The Challenge</h3>
               <p class="text-gray-700 leading-relaxed mb-4">
-                When Guinness would not concede them the 'first' title, the Chowdhurys filed a case 
+                When Guinness would not concede them the 'first' title, the Choudhurys filed a case 
                 against Guinness Publishing Limited in the Calcutta High Court. They demanded recognition 
                 as the first and fastest circumnavigators and sought seven-and-a-half million pounds in damages.
               </p>
@@ -108,7 +108,7 @@
               <h3 class="text-xl font-semibold mb-4">The Victory</h3>
               <p class="text-gray-700 leading-relaxed mb-4">
                 After five years of legal battle, on April 7, 1998, both parties signed an MOU. 
-                Guinness Publishing Limited consented to recognize the Chowdhurys as the first and fastest 
+                Guinness Publishing Limited consented to recognize the Choudhurys as the first and fastest 
                 man and woman, to be included in all future editions of the Guinness Book of World Records.
               </p>
             </div>
@@ -128,7 +128,7 @@
           <blockquote class="text-2xl font-medium text-gray-800 mb-4">
             "I did it for the city I was born in. It will feature on the world map of motor rallying."
           </blockquote>
-          <cite class="text-gray-600">- Saloo Chowdhury</cite>
+          <cite class="text-gray-600">- Saloo Choudhury</cite>
         </div>
       </div>
     </div>
@@ -140,9 +140,9 @@ import ArchivalVideo from '@/components/ArchivalVideo.vue'
 import { archivalVideos } from '@/config/archivalVideos'
 
 useSeoMeta({
-  title: 'About Saloo & Neena Chowdhury - World Record Circumnavigators',
+  title: 'About Saloo & Neena Choudhury - World Record Circumnavigators',
   description: 'Learn about the pioneering couple from Kolkata who became the first and fastest circumnavigators of the globe by car, covering six continents and breaking world records.',
-  ogTitle: 'About Saloo & Neena Chowdhury - World Record Circumnavigators',
+  ogTitle: 'About Saloo & Neena Choudhury - World Record Circumnavigators',
   ogDescription: 'Learn about the pioneering couple from Kolkata who became the first and fastest circumnavigators of the globe by car, covering six continents and breaking world records.'
 })
 </script>

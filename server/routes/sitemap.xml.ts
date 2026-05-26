@@ -1,5 +1,5 @@
 export default defineEventHandler(async (event) => {
-  const baseURL = 'https://saloo-neena.com' // Replace with your actual domain
+  const baseURL = 'https://salooneenachoudhury.com' // Replace with your actual domain
   
   const routes = [
     { url: '/', changefreq: 'weekly', priority: 1.0 },

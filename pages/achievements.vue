@@ -6,7 +6,7 @@
           <h1 class="text-4xl md:text-5xl font-bold mb-6">Achievements & Records</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
             Celebrating the remarkable achievements and world records set by 
-            Saloo & Neena Chowdhury in the field of motor rallying.
+            Saloo & Neena Choudhury in the field of motor rallying.
           </p>
         </div>
 
@@ -115,9 +115,9 @@ import ArchivalVideo from '@/components/ArchivalVideo.vue'
 import { archivalVideos } from '@/config/archivalVideos'
 
 useSeoMeta({
-  title: 'Achievements - Saloo & Neena Chowdhury World Records',
-  description: 'Discover the remarkable achievements and Guinness World Records set by Saloo & Neena Chowdhury in motor rallying and circumnavigation.',
-  ogTitle: 'Achievements - Saloo & Neena Chowdhury World Records'
+  title: 'Achievements - Saloo & Neena Choudhury World Records',
+  description: 'Discover the remarkable achievements and Guinness World Records set by Saloo & Neena Choudhury in motor rallying and circumnavigation.',
+  ogTitle: 'Achievements - Saloo & Neena Choudhury World Records'
 })
 
 const achievements = [

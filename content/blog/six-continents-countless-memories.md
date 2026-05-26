@@ -2,7 +2,7 @@
 title: 'Six Continents, Countless Memories: The Geography of Our Dreams'
 description: 'A continent-by-continent account of our record-breaking circumnavigation, from the familiar roads of Asia to the wild expanses of Australia.'
 date: '2024-02-20'
-author: 'Neena Chowdhury'
+author: 'Neena Choudhury'
 category: 'Travel Stories'
 featured: false
 image: '/images/journey/Saloo-Journey7.jpg'

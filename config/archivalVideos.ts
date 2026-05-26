@@ -3,7 +3,7 @@ export const archivalVideos = {
     title: '1989: The First Journey (Archival)',
     year: '1989',
     note: 'Original VGA capture from the first circumnavigation. Short highlight reel.',
-    youtubeId: 'VIDEO_ID_HERE',
+    youtubeId: '6hQAYTR95FI',
     transcript:
       'Transcript coming soon. This highlight shows early departure scenes and the long road ahead from the 1989 journey.'
   },
@@ -27,7 +27,7 @@ export const archivalVideos = {
     title: 'Guinness World Record Highlight (Archival)',
     year: '1991',
     note: 'Short archival clip celebrating the record-breaking achievement.',
-    youtubeId: 'VIDEO_ID_HERE',
+    youtubeId: '6hQAYTR95FI',
     transcript:
       'Transcript coming soon. A brief archival highlight of the Guinness World Record recognition.'
   },
@@ -37,7 +37,7 @@ export const archivalVideos = {
       title: '1989 Journey Highlights (Archival)',
       year: '1989',
       note: 'VGA-era footage preserved from the first circumnavigation.',
-      youtubeId: 'VIDEO_ID_HERE',
+      youtubeId: '6hQAYTR95FI',
       transcript:
         'Transcript coming soon. Short highlights from the 1989 journey across six continents.'
     },
@@ -46,7 +46,7 @@ export const archivalVideos = {
       title: '1991 Record Run (Archival)',
       year: '1991',
       note: 'Short highlight reel from the record-breaking run.',
-      youtubeId: 'VIDEO_ID_HERE',
+      youtubeId: '6hQAYTR95FI',
       transcript:
         'Transcript coming soon. Key moments from the 1991 record attempt.'
     },
@@ -55,7 +55,7 @@ export const archivalVideos = {
       title: 'Behind the Scenes (Archival)',
       year: '1991',
       note: 'Candid moments, preparations, and roadside scenes.',
-      youtubeId: 'VIDEO_ID_HERE',
+      youtubeId: '6hQAYTR95FI',
       transcript:
         'Transcript coming soon. Preparation footage and candid roadside scenes.'
     }

@@ -142,9 +142,9 @@ import ArchivalVideo from '@/components/ArchivalVideo.vue'
 import { archivalVideos } from '@/config/archivalVideos'
 import { siteConfig } from '~/config/site'
 useSeoMeta({
-  title: 'Gallery - Saloo & Neena Chowdhury Photo Collection',
+  title: 'Gallery - Saloo & Neena Choudhury Photo Collection',
   description: 'Browse through our extensive photo gallery capturing moments from record-breaking circumnavigation journeys across six continents.',
-  ogTitle: 'Gallery - Saloo & Neena Chowdhury Photo Collection'
+  ogTitle: 'Gallery - Saloo & Neena Choudhury Photo Collection'
 })
 
 const activeCategory = ref('all')

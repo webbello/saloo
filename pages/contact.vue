@@ -5,7 +5,7 @@
         <div class="text-center mb-16">
           <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get in touch with Saloo & Neena Chowdhury for speaking engagements, Car Restoration projects, media 
+            Get in touch with Saloo & Neena Choudhury for speaking engagements, Car Restoration projects, media 
             interviews, or to learn more about their incredible journey.
           </p>
         </div>
@@ -219,9 +219,9 @@
 
 <script setup>
 useSeoMeta({
-  title: 'Contact - Saloo & Neena Chowdhury',
-  description: 'Get in touch with world record holders Saloo & Neena Chowdhury for speaking engagements, interviews, and collaborations.',
-  ogTitle: 'Contact - Saloo & Neena Chowdhury'
+  title: 'Contact - Saloo & Neena Choudhury',
+  description: 'Get in touch with world record holders Saloo & Neena Choudhury for speaking engagements, interviews, and collaborations.',
+  ogTitle: 'Contact - Saloo & Neena Choudhury'
 })
 
 const form = reactive({

@@ -56,9 +56,9 @@
 
 <script setup>
 useSeoMeta({
-  title: 'Journeys - Saloo & Neena Chowdhury Adventures',
-  description: 'Explore the epic journeys and adventures of Saloo & Neena Chowdhury across six continents during their record-breaking circumnavigation attempts.',
-  ogTitle: 'Journeys - Saloo & Neena Chowdhury Adventures'
+  title: 'Journeys - Saloo & Neena Choudhury Adventures',
+  description: 'Explore the epic journeys and adventures of Saloo & Neena Choudhury across six continents during their record-breaking circumnavigation attempts.',
+  ogTitle: 'Journeys - Saloo & Neena Choudhury Adventures'
 })
 
 const activeFilter = ref('all')
