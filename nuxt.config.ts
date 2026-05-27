@@ -22,7 +22,14 @@ export default defineNuxtConfig({
     }
   },
   
-  css: ['~/assets/css/main.css'],
+  // Font listed first so it's available when main.css applies font-family.
+  // Kept separate from main.css so Vite processes it as a plain CSS asset
+  // and doesn't run it through the @tailwindcss/postcss PostCSS pipeline,
+  // which cannot resolve bare node_modules @import specifiers in dev HMR.
+  css: [
+    '@fontsource-variable/inter/index.css',
+    '~/assets/css/main.css'
+  ],
   
   app: {
     baseURL: '/', // Changed from '/saloo/' to '/'
@@ -49,13 +56,16 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'canonical', href: 'https://salooneenachoudhury.com' },
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        // Early connection hints for YouTube — every page that embeds ArchivalVideo
+        // needs DNS + TCP + TLS to these origins before the first frame can load.
+        // preconnect = full connection handshake (highest priority, use sparingly)
+        // dns-prefetch = DNS only (lightweight, good for less-certain origins)
+        { rel: 'preconnect', href: 'https://www.youtube.com' },
+        { rel: 'dns-prefetch', href: 'https://i.ytimg.com' },
+        { rel: 'dns-prefetch', href: 'https://www.google.com' }
       ],
       script: [
-        {
-          src: 'https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js',
-          defer: true
-        },
         {
           type: 'application/ld+json',
           innerHTML: JSON.stringify({
