@@ -1,7 +1,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-01-13',
-  ssr: false,
-  target: 'static',
+  ssr: true,
   modules: [
     '@nuxt/content',
     '@vueuse/nuxt'
@@ -29,22 +28,24 @@ export default defineNuxtConfig({
     baseURL: '/', // Changed from '/saloo/' to '/'
     buildAssetsDir: 'assets',
     head: {
-      title: 'Saloo & Neena Chowdhury - World Record Circumnavigators',
+      title: 'Saloo & Neena Choudhury - World Record Circumnavigators',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { 
           name: 'description', 
-          content: 'First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders Saloo & Neena Chowdhury from Kolkata.' 
+          content: 'First and fastest circumnavigators of the globe covering six continents. Guinness World Record holders Saloo & Neena Choudhury from Kolkata.' 
         },
-        { name: 'keywords', content: 'Saloo Chowdhury, Neena Chowdhury, Guinness World Record, circumnavigation, motor rally, adventure, Kolkata, Ambassador car, world record holders' },
-        { name: 'author', content: 'Saloo & Neena Chowdhury' },
+        { name: 'keywords', content: 'Saloo Choudhury, Neena Choudhury, Guinness World Record, circumnavigation, motor rally, adventure, Kolkata, Ambassador car, world record holders' },
+        { name: 'author', content: 'Saloo & Neena Choudhury' },
         { name: 'robots', content: 'index, follow' },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: 'https://salooneenachoudhury.com/images/gallery/og-image.jpg' },
-        { property: 'og:site_name', content: 'Saloo & Neena Chowdhury' },
+        { property: 'og:site_name', content: 'Saloo & Neena Choudhury' },
         { name: 'twitter:creator', content: '@SalooNeena' },
-        { name: 'theme-color', content: '#3b82f6' }
+        { name: 'theme-color', content: '#3b82f6' },
+        { name: 'google-site-verification', content: 'kD5mOhlG8OvFI2x1Ns2GIZLZIf4v7H-HYjxkCR28XkU' }
+        
       ],
       link: [
         { rel: 'canonical', href: 'https://salooneenachoudhury.com' },
@@ -59,28 +60,35 @@ export default defineNuxtConfig({
           type: 'application/ld+json',
           innerHTML: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Saloo Chowdhury",
-            "alternateName": "Neena Chowdhury",
-            "description": "World Record Holders - First and fastest circumnavigators of the globe by car",
+            "@type": "WebSite",
+            "name": "Saloo & Neena Choudhury",
             "url": "https://salooneenachoudhury.com",
-            "sameAs": [
-              "https://www.guinnessworldrecords.com"
-            ],
-            "knowsAbout": [
-              "Motor Rally",
-              "Circumnavigation",
-              "World Records",
-              "Adventure Travel",
-              "Guinness World Records"
-            ],
-            "award": [
-              "Guinness World Record - First Circumnavigation by Car (1989)",
-              "Guinness World Record - Fastest Circumnavigation by Car (1991)"
-            ],
-            "birthPlace": {
-              "@type": "Place",
-              "name": "Kolkata, India"
+            "description": "First and fastest circumnavigators of the globe by car",
+            "alternativeHeadline": "Guinness World Record Holders from Kolkata, India",
+            "about": {
+              "@type": "Person",
+              "name": "Saloo Choudhury",
+              "alternateName": "Neena Choudhury",
+              "description": "World Record Holders - First and fastest circumnavigators of the globe by car",
+              "url": "https://salooneenachoudhury.com",
+              "sameAs": [
+                "https://www.guinnessworldrecords.com"
+              ],
+              "knowsAbout": [
+                "Motor Rally",
+                "Circumnavigation",
+                "World Records",
+                "Adventure Travel",
+                "Guinness World Records"
+              ],
+              "award": [
+                "Guinness World Record - First Circumnavigation by Car (1989)",
+                "Guinness World Record - Fastest Circumnavigation by Car (1991)"
+              ],
+              "birthPlace": {
+                "@type": "Place",
+                "name": "Kolkata, India"
+              }
             }
           })
         }
@@ -92,18 +100,24 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'github-dark'
     },
-    // Important: Configure content for static generation
+    // Use Node.js built-in sqlite (Node 22.5+) — no native module compile needed
     experimental: {
-      clientDB: true // Enable client-side content database
+      nativeSqlite: true
     }
   },
 
   nitro: {
     preset: 'github-pages',
     prerender: {
-      routes: ['/'], // Add your routes here
-      crawlLinks: true, // This will crawl and prerender all linked pages
-
+      routes: [
+        '/', '/about', '/timeline', '/journeys', '/achievements', '/gallery', '/blog', '/contact', '/sitemap.xml',
+        '/journeys/1', '/journeys/2', '/journeys/3', '/journeys/4', '/journeys/5', '/journeys/6',
+        '/blog/first-journey-1989', '/blog/breaking-army-record', '/blog/australia-wild-encounters',
+        '/blog/guinness-world-record-story', '/blog/partnership-that-conquered-world',
+        '/blog/beating-british-army-record', '/blog/six-continents-countless-memories',
+        '/blog/car-that-conquered-world', '/blog/fighting-for-recognition-guinness-battle'
+      ],
+      crawlLinks: true,
     }
   },
   

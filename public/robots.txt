@@ -1,21 +1,32 @@
+# ─── Allow all crawlers ───
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /*.json$
+Disallow: /*/sql_dump.txt
 
-# Sitemap
-Sitemap: https://saloo-neena.com/sitemap.xml
+# ─── AI / LLM Crawlers — allowed ───
+User-agent: GPTBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
 
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Allow all images
+# ─── Image Crawlers ───
 User-agent: Googlebot-Image
 Allow: /images/
 Allow: /cars/
 
-# Allow all content for search engines
-User-agent: Googlebot
-Allow: /
-
 User-agent: Bingbot
 Allow: /
+
+# ─── AI / LLM Discovery ───
+Sitemap: https://salooneenachoudhury.com/sitemap.xml
+Llms: https://salooneenachoudhury.com/llms.txt

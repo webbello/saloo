@@ -3,6 +3,7 @@
 .nuxt
 .nitro
 .cache
+.data
 dist
 
 # Node dependencies
@@ -63,8 +64,6 @@ jspm_packages/
 .next
 
 # Nuxt.js build / generate output
-.nuxt
-dist
 
 # Storybook build outputs
 .out

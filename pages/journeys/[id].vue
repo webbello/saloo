@@ -161,9 +161,45 @@ const journey = computed(() => {
   return allJourneys.find(j => j.id === journeyId)
 })
 
+const siteUrl = 'https://salooneenachoudhury.com'
+const defaultOgImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 // SEO
 useSeoMeta({
-  title: journey.value ? `${journey.value.title} - Saloo & Neena Chowdhury` : 'Journey Not Found',
-  description: journey.value?.description || 'Journey details not found'
+  title: journey.value ? `${journey.value.title} - Saloo & Neena Choudhury` : 'Journey Not Found',
+  description: journey.value?.description || 'Journey details not found',
+  ogTitle: journey.value ? `${journey.value.title} - Saloo & Neena Choudhury` : 'Journey Not Found',
+  ogDescription: journey.value?.description || 'Journey details not found',
+  ogImage: defaultOgImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: journey.value?.title || 'Journey',
+  ogUrl: `${siteUrl}/journeys/${journeyId}`,
+  ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
+  twitterCard: 'summary_large_image',
+  twitterTitle: journey.value ? `${journey.value.title} - Saloo & Neena Choudhury` : 'Journey Not Found',
+  twitterDescription: journey.value?.description || 'Journey details not found',
+  twitterImage: defaultOgImage,
+  twitterImageAlt: journey.value?.title || 'Journey'
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}/journeys/${journeyId}` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Journeys', item: `${siteUrl}/journeys` },
+          { '@type': 'ListItem', position: 3, name: journey.value?.title || 'Journey', item: `${siteUrl}/journeys/${journeyId}` }
+        ]
+      })
+    }
+  ]
 })
 </script>

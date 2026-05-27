@@ -1,8 +1,8 @@
 ---
 title: 'The Partnership That Conquered the World'
-description: 'Behind every great adventure is an unbreakable partnership. The story of how Saloo and Neena Chowdhury supported each other through the ultimate test of endurance.'
+description: 'Behind every great adventure is an unbreakable partnership. The story of how Saloo and Neena Choudhury supported each other through the ultimate test of endurance.'
 date: '2024-01-28'
-author: 'Saloo & Neena Chowdhury'
+author: 'Saloo & Neena Choudhury'
 category: 'Personal Stories'
 featured: false
 image: '/images/journey/Saloo-Journey6.jpg'

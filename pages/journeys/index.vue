@@ -55,10 +55,44 @@
 </template>
 
 <script setup>
+const siteUrl = 'https://salooneenachoudhury.com'
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 useSeoMeta({
-  title: 'Journeys - Saloo & Neena Chowdhury Adventures',
-  description: 'Explore the epic journeys and adventures of Saloo & Neena Chowdhury across six continents during their record-breaking circumnavigation attempts.',
-  ogTitle: 'Journeys - Saloo & Neena Chowdhury Adventures'
+  title: 'Journeys - Saloo & Neena Choudhury Adventures',
+  description: 'Explore the epic journeys and adventures of Saloo & Neena Choudhury across six continents during their record-breaking circumnavigation attempts.',
+  ogTitle: 'Journeys - Saloo & Neena Choudhury Adventures',
+  ogDescription: 'Explore the epic journeys and adventures of Saloo & Neena Choudhury across six continents during their record-breaking circumnavigation attempts.',
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Saloo and Neena Choudhury epic journeys',
+  ogUrl: `${siteUrl}/journeys`,
+  ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Journeys - Saloo & Neena Choudhury Adventures',
+  twitterDescription: 'Explore the epic journeys and adventures of Saloo & Neena Choudhury across six continents during their record-breaking circumnavigation attempts.',
+  twitterImage: ogImage,
+  twitterImageAlt: 'Saloo and Neena Choudhury epic journeys'
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}/journeys` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Journeys', item: `${siteUrl}/journeys` }
+        ]
+      })
+    }
+  ]
 })
 
 const activeFilter = ref('all')

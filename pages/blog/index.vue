@@ -55,7 +55,7 @@
             >
               <BlogCard
                 v-for="post in featuredPosts"
-                :key="post._path"
+                :key="post.path"
                 :post="post"
                 :featured="true"
               />
@@ -71,8 +71,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               <NuxtLink
                 v-for="post in latestPosts"
-                :key="post._path"
-                :to="post._path"
+                :key="post.path"
+                :to="post.path"
                 class="group flex items-center gap-4 bg-white rounded-2xl p-4 ring-1 ring-red-100/60 hover:shadow-lg transition"
               >
                 <div class="w-20 h-20 rounded-xl overflow-hidden shrink-0">
@@ -118,7 +118,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <BlogCard
                 v-for="post in filteredPosts"
-                :key="post._path"
+                :key="post.path"
                 :post="post"
               />
             </div>
@@ -186,14 +186,50 @@
 </style>
 
 <script setup>
+const siteUrl = 'https://salooneenachoudhury.com'
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 useSeoMeta({
-  title: 'Blog - Saloo & Neena Chowdhury Journey Stories',
-  description: 'Read inspiring stories and adventures from Saloo & Neena Chowdhury\'s record-breaking circumnavigation journeys around the world.',
-  ogTitle: 'Blog - Saloo & Neena Chowdhury Journey Stories'
+  title: 'Blog - Saloo & Neena Choudhury Journey Stories',
+  description: 'Read inspiring stories and adventures from Saloo & Neena Choudhury\'s record-breaking circumnavigation journeys around the world.',
+  ogTitle: 'Blog - Saloo & Neena Choudhury Journey Stories',
+  ogDescription: 'Read inspiring stories and adventures from Saloo & Neena Choudhury\'s record-breaking circumnavigation journeys around the world.',
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Saloo and Neena Choudhury blog',
+  ogUrl: `${siteUrl}/blog`,
+  ogType: 'blog',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Blog - Saloo & Neena Choudhury Journey Stories',
+  twitterDescription: 'Read inspiring stories and adventures from Saloo & Neena Choudhury\'s record-breaking circumnavigation journeys around the world.',
+  twitterImage: ogImage,
+  twitterImageAlt: 'Saloo and Neena Choudhury blog'
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}/blog` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` }
+        ]
+      })
+    }
+  ]
 })
 
 // Fetch blog posts
-const posts = await queryContent('/blog').sort({ date: -1 }).find().catch(() => [])
+const { data: posts } = await useAsyncData('blog-posts', () =>
+  queryCollection('blog').order('date', 'DESC').all()
+)
 
 const selectedCategory = ref('All')
 const email = ref('')
@@ -208,25 +244,25 @@ const fallbackImages = [
 
 // Get featured posts
 const featuredPosts = computed(() => {
-  return (posts || []).filter(post => post.featured)
+  return (posts.value || []).filter(post => post.featured)
 })
 
 const latestPosts = computed(() => {
-  return (posts || []).slice(0, 3)
+  return (posts.value || []).slice(0, 3)
 })
 
 // Get all categories
 const categories = computed(() => {
-  const allCategories = ['All', ...new Set((posts || []).map(post => post.category).filter(Boolean))]
+  const allCategories = ['All', ...new Set((posts.value || []).map(post => post.category).filter(Boolean))]
   return allCategories
 })
 
 // Filter posts by category
 const filteredPosts = computed(() => {
   if (selectedCategory.value === 'All') {
-    return posts || []
+    return posts.value || []
   }
-  return (posts || []).filter(post => post.category === selectedCategory.value)
+  return (posts.value || []).filter(post => post.category === selectedCategory.value)
 })
 
 const scrollFeatured = (direction) => {
@@ -248,7 +284,7 @@ let autoScrollInterval
 const startAutoScroll = () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   const isDesktop = window.matchMedia('(min-width: 1024px)').matches
-  if (autoScrollInterval || prefersReducedMotion || !isDesktop || featuredPosts.value.length <= 2) return
+  if (autoScrollInterval || prefersReducedMotion || !isDesktop || (featuredPosts.value?.length ?? 0) <= 2) return
   autoScrollInterval = setInterval(() => scrollFeatured(1), 4000)
 }
 

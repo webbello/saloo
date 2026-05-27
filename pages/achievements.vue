@@ -6,7 +6,7 @@
           <h1 class="text-4xl md:text-5xl font-bold mb-6">Achievements & Records</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
             Celebrating the remarkable achievements and world records set by 
-            Saloo & Neena Chowdhury in the field of motor rallying.
+            Saloo & Neena Choudhury in the field of motor rallying.
           </p>
         </div>
 
@@ -114,10 +114,44 @@
 import ArchivalVideo from '@/components/ArchivalVideo.vue'
 import { archivalVideos } from '@/config/archivalVideos'
 
+const siteUrl = 'https://salooneenachoudhury.com'
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 useSeoMeta({
-  title: 'Achievements - Saloo & Neena Chowdhury World Records',
-  description: 'Discover the remarkable achievements and Guinness World Records set by Saloo & Neena Chowdhury in motor rallying and circumnavigation.',
-  ogTitle: 'Achievements - Saloo & Neena Chowdhury World Records'
+  title: 'Achievements - Saloo & Neena Choudhury World Records',
+  description: 'Discover the remarkable achievements and Guinness World Records set by Saloo & Neena Choudhury in motor rallying and circumnavigation.',
+  ogTitle: 'Achievements - Saloo & Neena Choudhury World Records',
+  ogDescription: 'Discover the remarkable achievements and Guinness World Records set by Saloo & Neena Choudhury in motor rallying and circumnavigation.',
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Saloo and Neena Choudhury Guinness World Record achievements',
+  ogUrl: `${siteUrl}/achievements`,
+  ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Achievements - Saloo & Neena Choudhury World Records',
+  twitterDescription: 'Discover the remarkable achievements and Guinness World Records set by Saloo & Neena Choudhury in motor rallying and circumnavigation.',
+  twitterImage: ogImage,
+  twitterImageAlt: 'Saloo and Neena Choudhury Guinness World Record achievements'
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}/achievements` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Achievements', item: `${siteUrl}/achievements` }
+        ]
+      })
+    }
+  ]
 })
 
 const achievements = [

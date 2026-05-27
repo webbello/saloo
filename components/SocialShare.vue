@@ -29,6 +29,15 @@
       <iconify-icon icon="lucide:linkedin" class="text-xl"></iconify-icon>
     </button>
     
+    <!-- Pinterest -->
+    <button 
+      @click="shareOnPinterest"
+      class="p-2 text-gray-400 hover:text-red-600 transition-colors"
+      title="Share on Pinterest"
+    >
+      <iconify-icon icon="lucide:image" class="text-xl"></iconify-icon>
+    </button>
+    
     <!-- WhatsApp -->
     <button 
       @click="shareOnWhatsApp"
@@ -36,6 +45,15 @@
       title="Share on WhatsApp"
     >
       <iconify-icon icon="lucide:message-circle" class="text-xl"></iconify-icon>
+    </button>
+
+    <!-- Email -->
+    <button 
+      @click="shareViaEmail"
+      class="p-2 text-gray-400 hover:text-blue-500 transition-colors"
+      title="Share via Email"
+    >
+      <iconify-icon icon="lucide:mail" class="text-xl"></iconify-icon>
     </button>
     
     <!-- Copy Link -->
@@ -53,7 +71,7 @@
 const props = defineProps({
   title: {
     type: String,
-    default: 'Saloo & Neena Chowdhury - World Record Circumnavigators'
+    default: 'Saloo & Neena Choudhury - World Record Circumnavigators'
   },
   description: {
     type: String,
@@ -62,12 +80,16 @@ const props = defineProps({
   url: {
     type: String,
     default: ''
+  },
+  image: {
+    type: String,
+    default: 'https://salooneenachoudhury.com/images/gallery/og-image.jpg'
   }
 })
 
 const route = useRoute()
 const currentUrl = computed(() => {
-  return props.url || `https://saloo-neena.com${route.path}`
+  return props.url || `https://salooneenachoudhury.com${route.path}`
 })
 
 const shareOnFacebook = () => {
@@ -92,10 +114,20 @@ const shareOnWhatsApp = () => {
   window.open(url, '_blank')
 }
 
+const shareOnPinterest = () => {
+  const url = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentUrl.value)}&media=${encodeURIComponent(props.image)}&description=${encodeURIComponent(props.title)}`
+  window.open(url, '_blank', 'width=600,height=400')
+}
+
+const shareViaEmail = () => {
+  const subject = encodeURIComponent(props.title)
+  const body = encodeURIComponent(`${props.description}\n\n${currentUrl.value}`)
+  window.location.href = `mailto:?subject=${subject}&body=${body}`
+}
+
 const copyLink = async () => {
   try {
     await navigator.clipboard.writeText(currentUrl.value)
-    // You could add a toast notification here
     alert('Link copied to clipboard!')
   } catch (err) {
     console.error('Failed to copy link:', err)

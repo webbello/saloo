@@ -5,7 +5,7 @@
         <div class="text-center mb-16">
           <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get in touch with Saloo & Neena Chowdhury for speaking engagements, 
+            Get in touch with Saloo & Neena Choudhury for speaking engagements, Car Restoration projects, media 
             interviews, or to learn more about their incredible journey.
           </p>
         </div>
@@ -129,7 +129,7 @@
                   <iconify-icon icon="lucide:map-pin" class="text-blue-600 mr-3 text-xl"></iconify-icon>
                   <div>
                     <div class="font-medium">Location</div>
-                    <div class="text-gray-600">Kolkata, West Bengal, India</div>
+                    <div class="text-gray-600">67 Theater Road, Shakespeare Sarani, <br/>Kolkata 700017, West Bengal, India</div>
                   </div>
                 </div>
                 
@@ -137,7 +137,7 @@
                   <iconify-icon icon="lucide:mail" class="text-blue-600 mr-3 text-xl"></iconify-icon>
                   <div>
                     <div class="font-medium">Email</div>
-                    <div class="text-gray-600">contact@saloojourney.com</div>
+                    <div class="text-gray-600">saloochoudhury@hotmail.com</div>
                   </div>
                 </div>
                 
@@ -218,10 +218,44 @@
 </template>
 
 <script setup>
+const siteUrl = 'https://salooneenachoudhury.com'
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
+
 useSeoMeta({
-  title: 'Contact - Saloo & Neena Chowdhury',
-  description: 'Get in touch with world record holders Saloo & Neena Chowdhury for speaking engagements, interviews, and collaborations.',
-  ogTitle: 'Contact - Saloo & Neena Chowdhury'
+  title: 'Contact - Saloo & Neena Choudhury',
+  description: 'Get in touch with world record holders Saloo & Neena Choudhury for speaking engagements, interviews, and collaborations.',
+  ogTitle: 'Contact - Saloo & Neena Choudhury',
+  ogDescription: 'Get in touch with world record holders Saloo & Neena Choudhury for speaking engagements, interviews, and collaborations.',
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Contact Saloo and Neena Choudhury',
+  ogUrl: `${siteUrl}/contact`,
+  ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Contact - Saloo & Neena Choudhury',
+  twitterDescription: 'Get in touch with world record holders Saloo & Neena Choudhury for speaking engagements, interviews, and collaborations.',
+  twitterImage: ogImage,
+  twitterImageAlt: 'Contact Saloo and Neena Choudhury'
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${siteUrl}/contact` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Contact', item: `${siteUrl}/contact` }
+        ]
+      })
+    }
+  ]
 })
 
 const form = reactive({

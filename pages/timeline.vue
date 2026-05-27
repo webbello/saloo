@@ -9,7 +9,7 @@
               Journey Timeline
             </h1>
             <p id="timeline-intro" class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Follow the chronological journey of Saloo & Neena Chowdhury's record-breaking adventures
+              Follow the chronological journey of Saloo & Neena Choudhury's record-breaking adventures
               across six continents.
             </p>
           </div>
@@ -60,7 +60,7 @@ const timelineEvents = [
     year: '1991',
     title: 'British Army Challenge',
     description:
-      'The British Army accomplishes circumnavigation in 40 days, leading Guinness to drop the "first" title from the Chowdhurys\' record.',
+      'The British Army accomplishes circumnavigation in 40 days, leading Guinness to drop the "first" title from the Choudhurys\' record.',
     location: 'Global',
     image: '/images/journey/Saloo-Journey2.jpg',
     achievements: ['Army had significant advantages', 'No customs or visa delays', 'Royal Air Force backup']
@@ -70,7 +70,7 @@ const timelineEvents = [
     year: '1991',
     title: 'Record Breaking Journey',
     description:
-      'Determined to reclaim their title, the Chowdhurys set off again on November 7, 1991, covering 40,535 kilometres in just 39 days, 20 hours, 15 minutes.',
+      'Determined to reclaim their title, the Choudhurys set off again on November 7, 1991, covering 40,535 kilometres in just 39 days, 20 hours, 15 minutes.',
     location: 'Starting from Delhi, India',
     image: '/images/journey/Saloo-Journey3.jpg',
     achievements: ['Beat British Army by 3 hours 45 minutes', 'New world record', 'Fastest circumnavigation'],
@@ -91,7 +91,7 @@ const timelineEvents = [
     year: '1998',
     title: 'Victory and Recognition',
     description:
-      'On April 7, 1998, Guinness Publishing Limited signs MOU recognizing the Chowdhurys as first and fastest circumnavigators.',
+      'On April 7, 1998, Guinness Publishing Limited signs MOU recognizing the Choudhurys as first and fastest circumnavigators.',
     location: 'Legal Settlement',
     image: '/images/journey/Saloo-Journey5.jpg',
     achievements: ['Official recognition restored', 'Choudhury Trophy named in their honor', 'Legacy secured for Kolkata']
@@ -101,7 +101,7 @@ const timelineEvents = [
     year: 'Present',
     title: 'Continuing Legacy',
     description:
-      'The Chowdhurys continue to inspire adventurers worldwide, with their eyes set on bigger targets and new challenges.',
+      'The Choudhurys continue to inspire adventurers worldwide, with their eyes set on bigger targets and new challenges.',
     location: 'Kolkata, India',
     image: '/images/journey/Saloo-Journey6.jpg',
     achievements: ['Guinness World Records Road Challenge', 'Inspiration for future adventurers', 'Kolkata on world map']
@@ -110,21 +110,29 @@ const timelineEvents = [
 
 const siteUrl = 'https://salooneenachoudhury.com'
 const pageUrl = `${siteUrl}/timeline`
+const ogImage = `${siteUrl}/images/gallery/og-image.jpg`
 
 useSeoMeta({
-  title: 'Timeline - Saloo & Neena Chowdhury Journey',
+  title: 'Timeline - Saloo & Neena Choudhury Journey',
   description:
-    "Chronological timeline of Saloo & Neena Chowdhury's record-breaking circumnavigation journeys and achievements.",
-  ogTitle: 'Timeline - Saloo & Neena Chowdhury Journey',
+    "Chronological timeline of Saloo & Neena Choudhury's record-breaking circumnavigation journeys and achievements.",
+  ogTitle: 'Timeline - Saloo & Neena Choudhury Journey',
   ogDescription:
-    "Chronological timeline of Saloo & Neena Chowdhury's record-breaking circumnavigation journeys and achievements.",
+    "Chronological timeline of Saloo & Neena Choudhury's record-breaking circumnavigation journeys and achievements.",
+  ogImage,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Saloo and Neena Choudhury journey timeline',
   ogUrl: pageUrl,
   ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Saloo & Neena Choudhury',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Timeline - Saloo & Neena Chowdhury Journey',
+  twitterTitle: 'Timeline - Saloo & Neena Choudhury Journey',
   twitterDescription:
-    "Chronological timeline of Saloo & Neena Chowdhury's record-breaking circumnavigation journeys and achievements.",
-  twitterImage: `${siteUrl}/images/gallery/og-image.jpg`
+    "Chronological timeline of Saloo & Neena Choudhury's record-breaking circumnavigation journeys and achievements.",
+  twitterImage: ogImage,
+  twitterImageAlt: 'Saloo and Neena Choudhury journey timeline'
 })
 
 useHead({
@@ -134,8 +142,19 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Timeline', item: pageUrl }
+        ]
+      })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
         '@type': 'ItemList',
-        name: 'Saloo & Neena Chowdhury Journey Timeline',
+        name: 'Saloo & Neena Choudhury Journey Timeline',
         itemListElement: timelineEvents.map((event, index) => ({
           '@type': 'ListItem',
           position: index + 1,

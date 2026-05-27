@@ -2,7 +2,7 @@
 title: 'From Kolkata to the World: Our Guinness World Record Story'
 description: 'How two adventurers from Kolkata became the first and fastest circumnavigators of the globe by car, earning a place in the Guinness Book of World Records.'
 date: '2024-02-10'
-author: 'Neena Chowdhury'
+author: 'Neena Choudhury'
 category: 'Achievements'
 featured: true
 image: '/images/journey/Saloo-Journey5.jpg'
