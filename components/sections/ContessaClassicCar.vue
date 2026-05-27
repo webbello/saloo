@@ -46,10 +46,5 @@
 </template>
 
 <script setup>
-defineProps({
-  journey: {
-    type: Object,
-    required: true
-  }
-})
+// No props — this component renders static content about the Contessa Classic car
 </script>

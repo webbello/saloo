@@ -15,11 +15,12 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <div class="relative">
-              <img 
+              <img
                 src="/images/gallery/Scan8.jpg"
                 alt="Saloo and Neena Choudhury - World Record Holders"
                 class="rounded-lg shadow-lg w-full"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
               />
               <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-lg">
                 <iconify-icon icon="lucide:trophy" class="text-2xl"></iconify-icon>

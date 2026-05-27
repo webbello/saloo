@@ -3,10 +3,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* prevent any transformed child from creating horizontal scroll */
   }
-  
+
   body {
     @apply font-sans text-gray-900 bg-white;
+    overflow-x: hidden;
   }
 }
 
@@ -32,17 +34,45 @@
   .text-gradient {
     @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
   }
-  
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
-  
+
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
   }
-  
+
   .animate-spin-slow {
     animation: spin 20s linear infinite;
+  }
+}
+
+/*
+ * Accessibility — prefers-reduced-motion (WCAG 2.1 SC 2.3.3)
+ *
+ * Stop all decorative animations for users who have requested reduced
+ * motion in their OS settings. This covers Tailwind utility classes
+ * (.animate-pulse, .animate-bounce, etc.) and any custom animation
+ * classes defined in this file. Component-scoped animations have their
+ * own matching @media block as a secondary safety net.
+ *
+ * CSS transitions on interactive elements (hover, focus) are intentionally
+ * preserved — they aid usability and are not covered by SC 2.3.3.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-bounce,
+  .animate-ping,
+  .animate-spin,
+  .animate-spin-slow,
+  .animate-float,
+  .orbit-ring,
+  .orbit-ring-slow,
+  .floating-icon,
+  .marker,
+  .earth-surface {
+    animation: none !important;
   }
 }

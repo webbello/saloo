@@ -102,7 +102,7 @@
           </div>
           <div class="bg-gray-50 rounded-lg p-6">
             <h3 class="text-xl font-semibold mb-2">What car did Saloo & Neena Choudhury use for their journey?</h3>
-            <p class="text-gray-700">They drove a Hindustan Ambassador, an iconic Indian automobile, on both their record-breaking circumnavigation journeys across six continents, demonstrating Indian automotive engineering on the global stage.</p>
+            <p class="text-gray-700">They drove a Contessa Classic and Hindustan Ambassador, an iconic Indian automobile, on both their record-breaking circumnavigation journeys across six continents, demonstrating Indian automotive engineering on the global stage.</p>
           </div>
           <div class="bg-gray-50 rounded-lg p-6">
             <h3 class="text-xl font-semibold mb-2">How many continents did they cover?</h3>
