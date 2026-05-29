@@ -27,6 +27,5 @@ Allow: /cars/
 User-agent: Bingbot
 Allow: /
 
-# ─── AI / LLM Discovery ───
 Sitemap: https://salooneenachoudhury.com/sitemap.xml
-Llms: https://salooneenachoudhury.com/llms.txt
+# llms.txt is served at /llms.txt — AI crawlers discover it directly (no robots.txt directive needed)

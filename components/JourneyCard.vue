@@ -25,11 +25,12 @@
           <iconify-icon icon="lucide:map-pin" class="mr-1"></iconify-icon>
           {{ journey.distance }}
         </div>
-        <NuxtLink 
+        <NuxtLink
           :to="`/journeys/${journey.id}`"
+          :aria-label="`Explore journey: ${journey.title}`"
           class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
         >
-          Read More
+          Explore Journey
           <iconify-icon icon="lucide:arrow-right" class="ml-1"></iconify-icon>
         </NuxtLink>
       </div>
