@@ -1,6 +1,7 @@
 <template>
-  <NuxtLink 
+  <NuxtLink
     :to="post.path"
+    :aria-label="`Read article: ${post.title}`"
     class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ring-1 ring-red-100/60"
     :class="featured ? 'md:col-span-1' : ''"
   >
@@ -52,8 +53,8 @@
       </div>
       
       <div class="flex items-center justify-between">
-        <span class="text-red-600 hover:text-amber-600 font-semibold flex items-center">
-          Read More
+        <span class="text-red-600 hover:text-amber-600 font-semibold flex items-center" aria-hidden="true">
+          Read article
           <iconify-icon icon="lucide:arrow-right" class="ml-1"></iconify-icon>
         </span>
         
