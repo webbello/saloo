@@ -55,7 +55,6 @@ export default defineNuxtConfig({
         
       ],
       link: [
-        { rel: 'canonical', href: 'https://salooneenachoudhury.com' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         // Early connection hints for YouTube — every page that embeds ArchivalVideo
         // needs DNS + TCP + TLS to these origins before the first frame can load.
